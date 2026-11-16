@@ -678,6 +678,32 @@
 </head>
 <body>
 
+<!-- ==================== MULTI-SERVER INSTANCE BAR (server.js manager) ==================== -->
+<div id="instanceBar" style="position:fixed;top:0;left:0;right:0;height:46px;z-index:999;display:flex;align-items:center;gap:8px;padding:0 12px;background:#0d1117;border-bottom:1px solid #2b3139;color:#e6edf3;font-size:13px;">
+  <strong style="letter-spacing:.5px;">MC Server:</strong>
+  <select id="instSelect" onchange="selectInstance(this.value)" style="flex:1;max-width:340px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:5px 8px;"></select>
+  <button onclick="createInstance()" style="background:#238636;color:#fff;border:none;border-radius:6px;padding:5px 10px;cursor:pointer;">+ New Server</button>
+  <button onclick="restartInstance()" style="background:#21262d;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:5px 10px;cursor:pointer;">Restart</button>
+  <button onclick="stopInstance()" style="background:#21262d;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:5px 10px;cursor:pointer;">Stop</button>
+  <button onclick="deleteInstance()" style="background:#21262d;color:#f85149;border:1px solid #2b3139;border-radius:6px;padding:5px 10px;cursor:pointer;">Delete</button>
+  <span id="instStatus" style="color:#8b949e;"></span>
+</div>
+<div id="instForm" style="display:none;position:fixed;top:46px;left:0;right:0;z-index:998;background:#0d1117;border-bottom:1px solid #2b3139;padding:10px 12px;color:#e6edf3;font-size:13px;">
+  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+    <input id="inName" placeholder="Label (e.g. Aternos-1)" style="width:150px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <input id="inHost" placeholder="Host (luderick.aternos.host)" style="width:200px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <input id="inPort" placeholder="Port" type="number" style="width:90px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <input id="inBot" placeholder="Bot name (Herobrain)" style="width:160px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <input id="inOwner" placeholder="Owner (kzix)" style="width:130px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <input id="inFriendly" placeholder="Friendly (comma)" style="width:150px;background:#161b22;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 8px;">
+    <label style="display:flex;align-items:center;gap:5px;"><input id="inAuto" type="checkbox" checked> Auto-connect leader</label>
+    <button onclick="createInstance()" style="background:#238636;color:#fff;border:none;border-radius:6px;padding:6px 12px;cursor:pointer;">Create + Connect</button>
+    <button onclick="toggleInstForm()" style="background:#21262d;color:#e6edf3;border:1px solid #2b3139;border-radius:6px;padding:6px 12px;cursor:pointer;">Cancel</button>
+  </div>
+</div>
+<style>body { padding-top: 46px; }</style>
+<!-- ==================== END INSTANCE BAR ==================== -->
+
 <div class="app-shell">
   <!-- Minimal Left Sidebar Rail -->
   <aside class="rail">
@@ -959,9 +985,101 @@ function apiBase() {
 }
 
 async function j(url, opts) {
-  const r = await fetch(apiBase() + url, opts);
+  const iid = localStorage.getItem('heroInstance') || '';
+  const sep = url.includes('?') ? '&' : '?';
+  const r = await fetch(apiBase() + url + (iid ? `${sep}instance=${encodeURIComponent(iid)}` : ''), opts);
   return r.json();
 }
+
+// ==================== MULTI-SERVER INSTANCE CONTROL (server.js) ====================
+function currentInstanceId() { return localStorage.getItem('heroInstance') || ''; }
+
+async function loadInstances() {
+  try {
+    const d = await j('/api/instances');
+    if (!d || !d.ok) return;
+    const sel = document.getElementById('instSelect');
+    const st = document.getElementById('instStatus');
+    if (!sel) return;
+    const cur = currentInstanceId();
+    sel.innerHTML = '';
+    for (const inst of d.instances) {
+      const o = document.createElement('option');
+      o.value = inst.id;
+      o.textContent = `${inst.name} ${inst.running ? '(●' + (inst.agents || 0) + ' bots)' : '(○ stopped)'}`;
+      sel.appendChild(o);
+    }
+    if (d.instances.length === 0) {
+      sel.innerHTML = '<option value="">— koi instance nahi, + New Server dabao —</option>';
+    } else if (!d.instances.find(i => i.id === cur)) {
+      localStorage.setItem('heroInstance', d.instances[0].id);
+    }
+    sel.value = localStorage.getItem('heroInstance') || '';
+    const active = d.instances.find(i => i.id === (sel.value || cur));
+    if (st) st.textContent = active ? `${active.host}:${active.port}` : '';
+  } catch {}
+}
+
+function selectInstance(id) {
+  localStorage.setItem('heroInstance', id || '');
+  if (typeof loadState === 'function') loadState();
+  if (typeof loadLogs === 'function') loadLogs();
+}
+
+function toggleInstForm() {
+  const f = document.getElementById('instForm');
+  f.style.display = f.style.display === 'none' ? 'block' : 'none';
+}
+
+async function createInstance() {
+  const g = id => (document.getElementById(id) || {}).value || '';
+  const body = {
+    name: g('inName'), host: g('inHost'), port: g('inPort'),
+    botUsername: g('inBot'), ownerUsername: g('inOwner'),
+    friendlyPlayers: g('inFriendly').split(',').map(s => s.trim()).filter(Boolean),
+    autoStart: (document.getElementById('inAuto') || {}).checked !== false
+  };
+  if (!body.host) { toast('Host required', true); return; }
+  try {
+    const r = await fetch(apiBase() + '/api/instances', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    const d = await r.json();
+    if (!d.ok) { toast(d.error || 'Create failed', true); return; }
+    localStorage.setItem('heroInstance', d.instance.id);
+    toggleInstForm();
+    toast(`Instance "${d.instance.name}" created ✔`);
+    await loadInstances();
+    if (typeof loadState === 'function') loadState();
+  } catch (e) { toast('Server error: ' + e.message, true); }
+}
+
+async function restartInstance() {
+  const id = currentInstanceId();
+  if (!id) { toast('Pehle instance select karo', true); return; }
+  await fetch(apiBase() + `/api/instances/${id}/restart`, { method: 'POST' });
+  toast('Instance restarting…');
+  setTimeout(loadInstances, 1500);
+}
+
+async function stopInstance() {
+  const id = currentInstanceId();
+  if (!id) { toast('Pehle instance select karo', true); return; }
+  await fetch(apiBase() + `/api/instances/${id}/stop`, { method: 'POST' });
+  toast('Instance stopped');
+  setTimeout(loadInstances, 1000);
+}
+
+async function deleteInstance() {
+  const id = currentInstanceId();
+  if (!id) { toast('Pehle instance select karo', true); return; }
+  await fetch(apiBase() + `/api/instances/${id}`, { method: 'DELETE' });
+  localStorage.removeItem('heroInstance');
+  toast('Instance deleted');
+  await loadInstances();
+  if (typeof loadState === 'function') loadState();
+}
+
+setInterval(loadInstances, 5000);
+loadInstances();
 
 const ICO_OK = '<svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
 const ICO_ERR = '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';

@@ -4,12 +4,13 @@
   "description": "AI Minecraft Bot Swarm (Herobrain) + Web Control Dashboard",
   "main": "bot.js",
   "scripts": {
-    "start": "node --expose-gc --max-old-space-size=4096 bot.js --ui-only",
+    "start": "node server.js",
     "start:bot": "node --expose-gc --max-old-space-size=4096 bot.js",
     "start:swarm": "node --expose-gc --max-old-space-size=4096 bot.js --swarm 2",
     "start:swarm4": "node --expose-gc --max-old-space-size=4096 bot.js --swarm 4",
+    "start:ui": "node --expose-gc --max-old-space-size=4096 bot.js --ui-only",
     "build:ui": "mkdir -p dist && cp dashboard.html dist/index.html",
-    "test": "node --check bot.js && node --check skills.js && node --check webui.js && echo \"ALL SYNTAX OK\""
+    "test": "node --check bot.js && node --check skills.js && node --check webui.js && node --check server.js && echo \"ALL SYNTAX OK\""
   },
   "engines": {
     "node": ">=18"
@@ -20,6 +21,7 @@
   "type": "commonjs",
   "dependencies": {
     "dotenv": "^18.0.10",
+    "express": "^5.3.0",
     "groq-sdk": "^0.13.0",
     "minecraft-data": "^3.119.0",
     "mineflayer": "^4.39.0",

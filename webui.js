@@ -204,4 +204,4 @@ function startWebUI(ctx) {
   return server;
 }
 
-module.exports = { startWebUI };
+module.exports = { startWebUI, buildAgentRow };
