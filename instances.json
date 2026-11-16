@@ -1,0 +1,15 @@
+[
+  {
+    "id": "9e34c3babc",
+    "name": "MC-coyote.aternos.host-60419",
+    "host": "coyote.aternos.host",
+    "port": 60419,
+    "botUsername": "Herobrain",
+    "ownerUsername": "kzix",
+    "friendlyPlayers": [
+      "kzix"
+    ],
+    "autoStart": false,
+    "createdAt": "2026-11-16T05:13:53.804Z"
+  }
+]

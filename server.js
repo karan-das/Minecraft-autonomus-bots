@@ -163,9 +163,84 @@ function pickInstance(req) {
   return null;
 }
 
-function findRunningInstanceOr404(req, res) {
+// Dashboard ke purane loadState() crash na ho — 404 ki jagah hamesha 200 + valid shape.
+// (bina instance ke: bot-config.json defaults + empty agents)
+function defaultDashboardConfig() {
+  try {
+    const raw = JSON.parse(fs.readFileSync(path.join(__dirname, 'bot-config.json'), 'utf8'));
+    return {
+      SERVER_HOST: String(raw.SERVER_HOST || 'localhost'),
+      SERVER_PORT: Number.parseInt(raw.SERVER_PORT, 10) || 25565,
+      BOT_USERNAME: String(raw.BOT_USERNAME || 'Herobrain'),
+      OWNER_USERNAME: String(raw.OWNER_USERNAME || ''),
+      FRIENDLY_PLAYERS: Array.isArray(raw.FRIENDLY_PLAYERS) ? raw.FRIENDLY_PLAYERS : []
+    };
+  } catch {
+    return { SERVER_HOST: 'localhost', SERVER_PORT: 25565, BOT_USERNAME: 'Herobrain', OWNER_USERNAME: '', FRIENDLY_PLAYERS: [] };
+  }
+}
+
+function emptyDashboardState(inst) {
+  const mu = process.memoryUsage();
+  return {
+    ok: true,
+    config: inst ? {
+      SERVER_HOST: inst.host, SERVER_PORT: inst.port,
+      BOT_USERNAME: inst.botUsername, OWNER_USERNAME: inst.ownerUsername,
+      FRIENDLY_PLAYERS: inst.friendlyPlayers || []
+    } : defaultDashboardConfig(),
+    agents: [],
+    memory: { stage: inst ? 'starting' : '—', decisions: 0, completed: 0, failed: 0 },
+    evo: { generation: 0, mode: 'idle', experiences: 0, population: 0 },
+    heapMB: Math.round(mu.heapUsed / 1048576),
+    rssMB: Math.round(mu.rss / 1048576),
+    uptimeSec: Math.round(process.uptime()),
+    meta: inst ? publicMeta(inst) : null,
+    noInstance: !inst
+  };
+}
+
+function findInstance(req, res) {
   const inst = pickInstance(req);
-  if (!inst) { res.status(404).json({ ok: false, error: 'No instance selected/running. Pehle instance create karo.' }); return null; }
+  if (!inst) {
+    res.json({ ok: false, error: 'Koi MC server instance nahi — dashboard pe "+ New Server" se pehle banao.' });
+    return null;
+  }
+  return inst;
+}
+
+// bot-config.json se default instance (purane one-click "Start" flow ke liye)
+function createDefaultInstance() {
+  const cfg = defaultDashboardConfig();
+  const inst = {
+    id: crypto.randomBytes(5).toString('hex'),
+    name: `MC-${cfg.SERVER_HOST}-${cfg.SERVER_PORT}`,
+    host: cfg.SERVER_HOST, port: cfg.SERVER_PORT, botUsername: cfg.BOT_USERNAME,
+    ownerUsername: cfg.OWNER_USERNAME, friendlyPlayers: cfg.FRIENDLY_PLAYERS || [],
+    autoStart: false,
+    child: null, status: 'stopped', logs: [], lastState: null, startedAt: null,
+    createdAt: new Date().toISOString(), stderrBuf: ''
+  };
+  instances.set(inst.id, inst);
+  saveRegistry();
+  spawnInstance(inst);
+  console.log(`[SERVER] Auto-created default instance from bot-config.json -> ${inst.host}:${inst.port}`);
+  return inst;
+}
+
+// POST command endpoints ke liye: instance nahi? auto-create/respawn karke chalao.
+// (GET /api/state pe iska use MAT karo — 2.5s poll se stopped instances baar-baar spawn honge)
+function ensureInstanceRunning(req, res) {
+  let inst = pickInstance(req);
+  if (!inst && instances.size === 0) inst = createDefaultInstance();
+  if (!inst) {
+    res.json({ ok: false, error: 'Koi MC server instance nahi — dashboard pe "+ New Server" se pehle banao.' });
+    return null;
+  }
+  if (!inst.child) {
+    spawnInstance(inst);
+    console.log(`[SERVER] Auto-started instance "${inst.name}" (dashboard command aaya)`);
+  }
   return inst;
 }
 
@@ -250,34 +325,34 @@ app.delete('/api/instances/:id', (req, res) => {
 
 // ----- per-instance control (same API shapes as webui.js — dashboard unchanged logic) -----
 app.get('/api/state', async (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
-  if (!inst) return;
+  const inst = pickInstance(req);
+  if (!inst) return res.json(emptyDashboardState(null));
   const fresh = await sendCommand(inst, 'state', {}, 8000);
   const state = fresh.ok ? fresh.result : inst.lastState;
-  if (!state) return res.json({ ok: false, error: 'Instance starting — state abhi nahi aaya', meta: publicMeta(inst) });
+  if (!state) return res.json(emptyDashboardState(inst));
   res.json({ ...state, meta: publicMeta(inst) });
 });
 
 app.get('/api/logs', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
-  if (!inst) return;
+  const inst = pickInstance(req);
+  if (!inst) return res.json({ ok: true, lines: [], meta: null });
   res.json({ ok: true, lines: inst.logs.slice(-250), meta: publicMeta(inst) });
 });
 
 app.post('/api/config', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   sendCommand(inst, 'setConfig', req.body || {}).then(r => res.json(r.ok ? { ok: true, config: r.result } : r));
 });
 
 app.post('/api/connect', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   sendCommand(inst, 'ensureLeader').then(r => res.json(r.ok ? r.result : r));
 });
 
 app.post('/api/spawn', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   const b = req.body || {};
   const cmd = Array.isArray(b.names) && b.names.length ? 'startSwarmNamed' : 'startSwarm';
@@ -286,13 +361,13 @@ app.post('/api/spawn', (req, res) => {
 });
 
 app.post('/api/disconnect', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   sendCommand(inst, 'disconnectBot', req.body || {}).then(r => res.json(r.ok ? r.result : r));
 });
 
 app.post('/api/stop', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   const b = req.body || {};
   if (b.all === true) sendCommand(inst, 'stopAll', { all: true }).then(r => res.json(r.ok ? r.result : r));
@@ -300,7 +375,7 @@ app.post('/api/stop', (req, res) => {
 });
 
 app.post('/api/chat', (req, res) => {
-  const inst = findRunningInstanceOr404(req, res);
+  const inst = ensureInstanceRunning(req, res);
   if (!inst) return;
   const b = req.body || {};
   sendCommand(inst, 'chat', { target: b.target, message: b.message }).then(r => res.json(r.ok ? r.result : r));

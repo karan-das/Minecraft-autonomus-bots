@@ -286,5 +286,17 @@
     "best": 0.7663,
     "avg": 0.7221,
     "champion": 0.7686
+  },
+  {
+    "generation": 49,
+    "best": 0.7652,
+    "avg": 0.7223,
+    "champion": 0.7686
+  },
+  {
+    "generation": 50,
+    "best": 0.7651,
+    "avg": 0.7188,
+    "champion": 0.7686
   }
 ]

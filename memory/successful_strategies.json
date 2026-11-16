@@ -1,534 +1,5 @@
 [
   {
-    "timestamp": 1794751460585,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "parkour",
-    "reward": 0.986,
-    "actionParams": [
-      0.33711429425347034,
-      0.38622049940513153,
-      0.4723959028849171,
-      0.37313130711903225
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.68,
-      "elapsedMs": 651,
-      "startY": 64.42,
-      "endY": 63
-    }
-  },
-  {
-    "timestamp": 1794751461039,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "parkour",
-    "reward": 0.916,
-    "actionParams": [
-      0.3707728737605744,
-      0.3835310685756379,
-      0.5120593209027315,
-      0.4045249141277764
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.33,
-      "elapsedMs": 402,
-      "startY": 63.42,
-      "endY": 64
-    }
-  },
-  {
-    "timestamp": 1794751464978,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "pvp",
-    "reward": 3.983,
-    "actionParams": [
-      0.8560747843164804,
-      1,
-      0.594680159163525,
-      1
-    ],
-    "situationSummary": {
-      "enemy": "spider",
-      "elapsedMs": 4839,
-      "crits": 6,
-      "hits": 7,
-      "startHealth": 17.16666603088379,
-      "endHealth": 12.166666030883789
-    }
-  },
-  {
-    "timestamp": 1794751499001,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 0.9,
-    "actionParams": [
-      0.5605214522582812,
-      0.8624066359752023,
-      0.27483281941083587,
-      0.8106000094319054
-    ],
-    "situationSummary": {
-      "task": "gather_wood",
-      "logsAfter": 0
-    }
-  },
-  {
-    "timestamp": 1794751533010,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 0.9,
-    "actionParams": [
-      0.7402304988111122,
-      0.8955528414429121,
-      0.33852066013463095,
-      0.7193396560398121
-    ],
-    "situationSummary": {
-      "task": "gather_wood",
-      "logsAfter": 0
-    }
-  },
-  {
-    "timestamp": 1794751553560,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 0.9,
-    "actionParams": [
-      0.7059313915246773,
-      0.8591058287161203,
-      0.3564915558850269,
-      0.6933219564139249
-    ],
-    "situationSummary": {
-      "task": "gather_wood",
-      "logsAfter": 4
-    }
-  },
-  {
-    "timestamp": 1794751555678,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_birch_planks",
-      "total": 16
-    }
-  },
-  {
-    "timestamp": 1794751557121,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_stick",
-      "total": 4
-    }
-  },
-  {
-    "timestamp": 1794751559344,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_crafting_table",
-      "total": 1
-    }
-  },
-  {
-    "timestamp": 1794751563943,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_wooden_sword",
-      "total": 1
-    }
-  },
-  {
-    "timestamp": 1794751565625,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_stick",
-      "total": 7
-    }
-  },
-  {
-    "timestamp": 1794751568294,
-    "generation": 28,
-    "agentId": "GEN028_AGENT_32",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_wooden_pickaxe",
-      "total": 1
-    }
-  },
-  {
-    "timestamp": 1794751576120,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "survival",
-    "reward": 0.9,
-    "actionParams": [
-      0.6791621861353627,
-      0.7085753345624842,
-      0.2427126206261436,
-      0.6566195356054226
-    ],
-    "situationSummary": {
-      "task": "gather_wood",
-      "logsAfter": 7
-    }
-  },
-  {
-    "timestamp": 1794751577247,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_dark_oak_planks",
-      "total": 4
-    }
-  },
-  {
-    "timestamp": 1794751580234,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_wooden_axe",
-      "total": 1
-    }
-  },
-  {
-    "timestamp": 1794751581703,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_stick",
-      "total": 7
-    }
-  },
-  {
-    "timestamp": 1794751582353,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "survival",
-    "reward": 1,
-    "actionParams": [
-      0.5,
-      0.7,
-      0.9,
-      0.5
-    ],
-    "situationSummary": {
-      "task": "craft_dark_oak_planks",
-      "total": 5
-    }
-  },
-  {
-    "timestamp": 1794751684776,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "pvp",
-    "reward": 1.7,
-    "actionParams": [
-      0.800575071981667,
-      1,
-      0.39812336051976094,
-      1
-    ],
-    "situationSummary": {
-      "enemy": "zombie",
-      "elapsedMs": 26754,
-      "crits": 2,
-      "hits": 3,
-      "startHealth": 13.166666030883789,
-      "endHealth": 3.166666030883789
-    }
-  },
-  {
-    "timestamp": 1794752186837,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 1.045,
-    "actionParams": [
-      0.6690566017238849,
-      0.4153811483212487,
-      0.30300209891331376,
-      0.5031640618057938
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.98,
-      "elapsedMs": 657,
-      "startY": 60.42,
-      "endY": 59
-    }
-  },
-  {
-    "timestamp": 1794752189113,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 0.961,
-    "actionParams": [
-      0.5819205370707029,
-      0.4552740378683217,
-      0.32798953420308796,
-      0.5322696150902388
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.55,
-      "elapsedMs": 400,
-      "startY": 59.42,
-      "endY": 60
-    }
-  },
-  {
-    "timestamp": 1794752189718,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 1.065,
-    "actionParams": [
-      0.5094387363831161,
-      0.4152662714845507,
-      0.3298334890920098,
-      0.5562047444527609
-    ],
-    "situationSummary": {
-      "horizontalDistance": 2.08,
-      "elapsedMs": 553,
-      "startY": 60.42,
-      "endY": 60
-    }
-  },
-  {
-    "timestamp": 1794752190171,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 0.877,
-    "actionParams": [
-      0.5603514853411053,
-      0.5005651539562292,
-      0.3239431093678078,
-      0.5351770199307108
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.14,
-      "elapsedMs": 402,
-      "startY": 60.42,
-      "endY": 61
-    }
-  },
-  {
-    "timestamp": 1794752192128,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 1.107,
-    "actionParams": [
-      0.6439692272722719,
-      0.4603611894031179,
-      0.35751039173968757,
-      0.4911332180218437
-    ],
-    "situationSummary": {
-      "horizontalDistance": 2.29,
-      "elapsedMs": 555,
-      "startY": 64.42,
-      "endY": 64
-    }
-  },
-  {
-    "timestamp": 1794752192782,
-    "generation": 29,
-    "agentId": "GEN029_AGENT_25",
-    "skill": "parkour",
-    "reward": 1.006,
-    "actionParams": [
-      0.5139503947558082,
-      0.4568900596676816,
-      0.34147241179385524,
-      0.5550237401193884
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.78,
-      "elapsedMs": 553,
-      "startY": 64.42,
-      "endY": 64
-    }
-  },
-  {
-    "timestamp": 1794752218555,
-    "generation": 30,
-    "agentId": "GEN030_AGENT_26",
-    "skill": "parkour",
-    "reward": 0.9,
-    "actionParams": [
-      0.4346859841076828,
-      0.31668999191546493,
-      0.4178293563647458,
-      0.3788248731348428
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.25,
-      "elapsedMs": 402,
-      "startY": 63.42,
-      "endY": 64
-    }
-  },
-  {
-    "timestamp": 1794752227918,
-    "generation": 30,
-    "agentId": "GEN030_AGENT_26",
-    "skill": "pvp",
-    "reward": 11.383,
-    "actionParams": [
-      0.8605027809542747,
-      1,
-      0.4885437200343764,
-      1
-    ],
-    "situationSummary": {
-      "enemy": "zombie",
-      "elapsedMs": 15806,
-      "crits": 19,
-      "hits": 21,
-      "startHealth": 18.166664123535156,
-      "endHealth": 16.166664123535156
-    }
-  },
-  {
-    "timestamp": 1794752230094,
-    "generation": 30,
-    "agentId": "GEN030_AGENT_26",
-    "skill": "parkour",
-    "reward": 1.008,
-    "actionParams": [
-      0.4709574117774155,
-      0.32427452735529866,
-      0.3376023535982582,
-      0.3975986831857957
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.79,
-      "elapsedMs": 702,
-      "startY": 60.42,
-      "endY": 58
-    }
-  },
-  {
-    "timestamp": 1794752231282,
-    "generation": 30,
-    "agentId": "GEN030_AGENT_26",
-    "skill": "parkour",
-    "reward": 0.895,
-    "actionParams": [
-      0.47804072423315397,
-      0.33320883693152764,
-      0.37798695999007503,
-      0.3835933398766959
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.22,
-      "elapsedMs": 403,
-      "startY": 58.42,
-      "endY": 59
-    }
-  },
-  {
-    "timestamp": 1794752240377,
-    "generation": 30,
-    "agentId": "GEN030_AGENT_26",
-    "skill": "parkour",
-    "reward": 0.96,
-    "actionParams": [
-      0.5060637824381368,
-      0.3879210232813483,
-      0.3342262567320357,
-      0.33623137729500197
-    ],
-    "situationSummary": {
-      "horizontalDistance": 1.55,
-      "elapsedMs": 404,
-      "startY": 60.42,
-      "endY": 61
-    }
-  },
-  {
     "timestamp": 1794752243167,
     "generation": 30,
     "agentId": "GEN030_AGENT_26",
@@ -5581,6 +5052,557 @@
       "elapsedMs": 406,
       "startY": 62.42,
       "endY": 63
+    }
+  },
+  {
+    "timestamp": 1794805331197,
+    "generation": 48,
+    "agentId": "GEN048_ELITE_02",
+    "skill": "parkour",
+    "reward": 1.16,
+    "actionParams": [
+      0.6169705605651807,
+      0.46886511252636387,
+      0.32325563460913787,
+      0.5847071499838365
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.55,
+      "elapsedMs": 434,
+      "startY": 58.42,
+      "endY": 58
+    }
+  },
+  {
+    "timestamp": 1794805334811,
+    "generation": 48,
+    "agentId": "GEN048_ELITE_02",
+    "skill": "parkour",
+    "reward": 1.186,
+    "actionParams": [
+      0.655609753764275,
+      0.48357769050130095,
+      0.31257312424058675,
+      0.599357198474932
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.68,
+      "elapsedMs": 552,
+      "startY": 63.42,
+      "endY": 63
+    }
+  },
+  {
+    "timestamp": 1794805336621,
+    "generation": 48,
+    "agentId": "GEN048_ELITE_02",
+    "skill": "parkour",
+    "reward": 1.236,
+    "actionParams": [
+      0.6437755525565527,
+      0.31363096513139355,
+      0.46247821551469476,
+      0.5132262473600812
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.93,
+      "elapsedMs": 558,
+      "startY": 62.42,
+      "endY": 62
+    }
+  },
+  {
+    "timestamp": 1794805337529,
+    "generation": 48,
+    "agentId": "GEN048_ELITE_02",
+    "skill": "parkour",
+    "reward": 1.029,
+    "actionParams": [
+      0.6612048985800832,
+      0.3234120677153135,
+      0.4755039081182516,
+      0.5103233796160931
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.89,
+      "elapsedMs": 404,
+      "startY": 63.42,
+      "endY": 64
+    }
+  },
+  {
+    "timestamp": 1794805338702,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.247,
+    "actionParams": [
+      0.658305871147506,
+      0.47344715131594134,
+      0.3892666904762657,
+      0.6244706788021788
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.98,
+      "elapsedMs": 514,
+      "startY": 63.42,
+      "endY": 63
+    }
+  },
+  {
+    "timestamp": 1794805339307,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.187,
+    "actionParams": [
+      0.6733664270184635,
+      0.5144848275506161,
+      0.38422361947375916,
+      0.5293407864962526
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.68,
+      "elapsedMs": 555,
+      "startY": 63.42,
+      "endY": 63
+    }
+  },
+  {
+    "timestamp": 1794805340824,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 0.889,
+    "actionParams": [
+      0.5716252948850836,
+      0.4492742085299964,
+      0.3707149940870516,
+      0.6237509477670684
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.19,
+      "elapsedMs": 402,
+      "startY": 58.42,
+      "endY": 59
+    }
+  },
+  {
+    "timestamp": 1794805342166,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 0.875,
+    "actionParams": [
+      0.6275727960729648,
+      0.4204025864751421,
+      0.34520571330525746,
+      0.6126071236273207
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.13,
+      "elapsedMs": 406,
+      "startY": 61.42,
+      "endY": 62
+    }
+  },
+  {
+    "timestamp": 1794805342849,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 0.956,
+    "actionParams": [
+      0.6490923608228064,
+      0.5443858616066672,
+      0.3518630468130544,
+      0.507026422779014
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.53,
+      "elapsedMs": 401,
+      "startY": 67.42,
+      "endY": 68
+    }
+  },
+  {
+    "timestamp": 1794805343786,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 1.186,
+    "actionParams": [
+      0.6241714996566353,
+      0.34014834133083977,
+      0.45389284839698923,
+      0.5194670777094049
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.68,
+      "elapsedMs": 567,
+      "startY": 63.42,
+      "endY": 63
+    }
+  },
+  {
+    "timestamp": 1794805345602,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 1.236,
+    "actionParams": [
+      0.6513094827135156,
+      0.3731658209698818,
+      0.48404813588075857,
+      0.5439966245412049
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.93,
+      "elapsedMs": 551,
+      "startY": 62.42,
+      "endY": 62
+    }
+  },
+  {
+    "timestamp": 1794805345767,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.25,
+    "actionParams": [
+      0.716503361372418,
+      0.5321799436185308,
+      0.37668278750080075,
+      0.516013807095139
+    ],
+    "situationSummary": {
+      "horizontalDistance": 3.15,
+      "elapsedMs": 551,
+      "startY": 70.42,
+      "endY": 70
+    }
+  },
+  {
+    "timestamp": 1794805346465,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 1.022,
+    "actionParams": [
+      0.6926394421944605,
+      0.36459267934486933,
+      0.44199876321364046,
+      0.5126106652270992
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.86,
+      "elapsedMs": 351,
+      "startY": 63.42,
+      "endY": 64
+    }
+  },
+  {
+    "timestamp": 1794805347373,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 1.25,
+    "actionParams": [
+      0.681171679712584,
+      0.4559990624942838,
+      0.3548309721034518,
+      0.6066337891578869
+    ],
+    "situationSummary": {
+      "horizontalDistance": 3.03,
+      "elapsedMs": 553,
+      "startY": 64.42,
+      "endY": 64
+    }
+  },
+  {
+    "timestamp": 1794805347749,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.038,
+    "actionParams": [
+      0.6035306100253338,
+      0.48163209426288506,
+      0.39177614063406463,
+      0.5281281714258753
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.94,
+      "elapsedMs": 507,
+      "startY": 73.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805348362,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_03",
+    "skill": "parkour",
+    "reward": 0.936,
+    "actionParams": [
+      0.6831796167229092,
+      0.47732781027412924,
+      0.3476374443823876,
+      0.5708874473312993
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.43,
+      "elapsedMs": 574,
+      "startY": 64.42,
+      "endY": 64
+    }
+  },
+  {
+    "timestamp": 1794805348465,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.219,
+    "actionParams": [
+      0.5742723451389202,
+      0.5148663488613752,
+      0.35599669293635017,
+      0.5597757962644047
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.85,
+      "elapsedMs": 666,
+      "startY": 73.42,
+      "endY": 72
+    }
+  },
+  {
+    "timestamp": 1794805350352,
+    "generation": 49,
+    "agentId": "GEN049_ELITE_04",
+    "skill": "parkour",
+    "reward": 0.952,
+    "actionParams": [
+      0.7319482362529791,
+      0.5150745773620526,
+      0.367387181915968,
+      0.5384074423936611
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.51,
+      "elapsedMs": 407,
+      "startY": 72.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805350768,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_05",
+    "skill": "parkour",
+    "reward": 0.935,
+    "actionParams": [
+      0.5910771038984026,
+      0.48236328916449234,
+      0.36683082730296435,
+      0.5315485131536845
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.42,
+      "elapsedMs": 415,
+      "startY": 73.42,
+      "endY": 74
+    }
+  },
+  {
+    "timestamp": 1794805351676,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 0.956,
+    "actionParams": [
+      0.5781787786077142,
+      0.44691671004593025,
+      0.42040241217887875,
+      0.6223722897960817
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.53,
+      "elapsedMs": 404,
+      "startY": 67.42,
+      "endY": 68
+    }
+  },
+  {
+    "timestamp": 1794805351774,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_05",
+    "skill": "parkour",
+    "reward": 1.028,
+    "actionParams": [
+      0.5548306071766043,
+      0.39967770593704266,
+      0.33007413890960163,
+      0.5527875655426573
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.89,
+      "elapsedMs": 555,
+      "startY": 73.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805353073,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_05",
+    "skill": "parkour",
+    "reward": 1.043,
+    "actionParams": [
+      0.721674378838445,
+      0.4342354786772326,
+      0.30604670112946714,
+      0.5454821966233995
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.96,
+      "elapsedMs": 630,
+      "startY": 74.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805354227,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_05",
+    "skill": "parkour",
+    "reward": 0.927,
+    "actionParams": [
+      0.6894352718529847,
+      0.471575155744129,
+      0.3324405276878534,
+      0.5551394745664487
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.39,
+      "elapsedMs": 401,
+      "startY": 73.42,
+      "endY": 74
+    }
+  },
+  {
+    "timestamp": 1794805354583,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.25,
+    "actionParams": [
+      0.6308362832125745,
+      0.45127547729843087,
+      0.39384335800935644,
+      0.6450145861909148
+    ],
+    "situationSummary": {
+      "horizontalDistance": 3.15,
+      "elapsedMs": 553,
+      "startY": 70.42,
+      "endY": 70
+    }
+  },
+  {
+    "timestamp": 1794805355087,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 0.878,
+    "actionParams": [
+      0.6291675082788679,
+      0.42572037015301306,
+      0.38299104833331743,
+      0.647318381942045
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.14,
+      "elapsedMs": 403,
+      "startY": 70.42,
+      "endY": 71
+    }
+  },
+  {
+    "timestamp": 1794805355991,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.041,
+    "actionParams": [
+      0.5405912248295001,
+      0.4538749343670964,
+      0.3424760492499182,
+      0.6811332485883668
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.96,
+      "elapsedMs": 402,
+      "startY": 72.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805356598,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.079,
+    "actionParams": [
+      0.5107938865016777,
+      0.45478073586729717,
+      0.3720664820260409,
+      0.6390794608193107
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.14,
+      "elapsedMs": 557,
+      "startY": 73.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805357925,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 0.993,
+    "actionParams": [
+      0.6261163839012902,
+      0.40061698399198753,
+      0.4086785426669133,
+      0.6107979914585688
+    ],
+    "situationSummary": {
+      "horizontalDistance": 1.72,
+      "elapsedMs": 653,
+      "startY": 74.42,
+      "endY": 73
+    }
+  },
+  {
+    "timestamp": 1794805359380,
+    "generation": 50,
+    "agentId": "GEN050_ELITE_04",
+    "skill": "parkour",
+    "reward": 1.104,
+    "actionParams": [
+      0.6472051493684182,
+      0.41071993408151214,
+      0.3637175692761626,
+      0.6312040010015049
+    ],
+    "situationSummary": {
+      "horizontalDistance": 2.27,
+      "elapsedMs": 552,
+      "startY": 73.42,
+      "endY": 73
     }
   }
 ]

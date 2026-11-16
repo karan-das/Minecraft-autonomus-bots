@@ -34,9 +34,9 @@
   },
   "resources": {
     "wood": {
-      "x": 177,
-      "y": 67,
-      "z": 101
+      "x": 176,
+      "y": 71,
+      "z": 90
     }
   },
   "dangerousLocations": [],
@@ -805,12 +805,12 @@
     "observations": 602
   },
   "portalPosition": null,
-  "decisions": 27120,
+  "decisions": 27185,
   "stage": 2,
   "basePosition": null,
   "lastPosition": {
-    "x": 168,
-    "y": 64,
-    "z": 100
+    "x": 179,
+    "y": 73,
+    "z": 85
   }
 }

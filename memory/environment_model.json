@@ -1,13 +1,13 @@
 {
-  "deathCount": 21,
+  "deathCount": 22,
   "lastLesson": {
-    "generation": 45,
-    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge",
-    "targetSkill": "pvp",
-    "attackerName": "kzix",
-    "stage": 1,
-    "goal": "thinking",
-    "timestamp": "2026-11-15T15:42:05.402Z"
+    "generation": 48,
+    "evidence": "unexpected_death",
+    "targetSkill": "survival",
+    "attackerName": null,
+    "stage": 2,
+    "goal": "initializing",
+    "timestamp": "2026-11-16T05:02:18.279Z"
   },
   "dangerProfiles": {
     "creeper": {
@@ -89,34 +89,6 @@
     "stuckCautionBoost": 0
   },
   "replayScenarios": [
-    {
-      "skill": "survival",
-      "stateVector": [
-        1,
-        1,
-        0,
-        0.005117038467230372,
-        0.3603535562230335,
-        1,
-        1,
-        1,
-        0,
-        0,
-        0,
-        0,
-        1,
-        0,
-        0,
-        0,
-        0.14285714285714285,
-        1,
-        0.2,
-        1,
-        0,
-        0
-      ],
-      "evidence": "wood_failed"
-    },
     {
       "skill": "survival",
       "stateVector": [
@@ -1488,6 +1460,34 @@
         0
       ],
       "evidence": "wood_failed"
+    },
+    {
+      "skill": "survival",
+      "stateVector": [
+        1,
+        0.85,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0.2857142857142857,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "evidence": "unexpected_death"
     }
   ]
 }

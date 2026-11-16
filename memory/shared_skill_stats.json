@@ -32,12 +32,12 @@
     "lastEvaluatedGen": 26
   },
   "parkour": {
-    "score": 0.9688,
-    "attempts": 385,
-    "successes": 373,
+    "score": 0.971,
+    "attempts": 414,
+    "successes": 402,
     "failures": 12,
-    "avgReward": 1.0586,
-    "lastEvaluatedGen": 48
+    "avgReward": 1.0516,
+    "lastEvaluatedGen": 50
   },
   "building": {
     "score": 0,
@@ -48,11 +48,11 @@
     "lastEvaluatedGen": 13
   },
   "survival": {
-    "score": 0.6238,
-    "attempts": 319,
+    "score": 0.6219,
+    "attempts": 320,
     "successes": 199,
-    "failures": 120,
-    "avgReward": -0.1574,
+    "failures": 121,
+    "avgReward": -0.3368,
     "lastEvaluatedGen": 48
   },
   "exploration": {

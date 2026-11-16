@@ -3682,5 +3682,34 @@
       0.5544094417137522
     ],
     "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794805338279,
+    "generation": 48,
+    "agentId": "GEN048_ELITE_04",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 2,
+      "goal": "initializing",
+      "attackerName": null,
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "unknown"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "unexpected_death"
   }
 ]
