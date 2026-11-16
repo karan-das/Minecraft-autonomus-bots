@@ -116,6 +116,10 @@ const INITIAL_SWARM_COUNT = swarmFlagIdx !== -1
   ? Math.max(1, Math.min(20, parseInt(process.argv[swarmFlagIdx + 1] || '4', 10) || 4))
   : 1;
 
+// UI-ONLY mode: sirf dashboard/API start hota hai, koi bot auto-connect NAHI hota.
+// Trigger: `npm start` (bot.js --ui-only) ya env UI_ONLY=1. Bots dashboard buttons se spawn hote hain.
+const UI_ONLY_MODE = process.argv.includes('--ui-only') || process.env.UI_ONLY === '1';
+
 const SWARM_CONNECT_DELAY_MS = Math.max(
   5000,
   Number.parseInt(process.env.SWARM_CONNECT_DELAY_MS || '8000', 10) || 8000
@@ -1443,11 +1447,16 @@ function startArenaTrainer(leaderBot) {
 // BOOTSTRAP
 // ========================================
 
-createBotAgent(0, botRuntimeConfig.BOT_USERNAME, true);
-startEvolutionScheduler();
-if (INITIAL_SWARM_COUNT > 1) {
-  evo.setMode(MODES.TRAINING);
-  startSwarm(INITIAL_SWARM_COUNT);
+if (UI_ONLY_MODE) {
+  console.log('[WEB] UI-ONLY mode: koi bot auto-connect nahi hoga — Dashboard se "Connect Leader" ya "Start Named Swarm" use karo.');
+  if (INITIAL_SWARM_COUNT > 1) console.log('[WEB] Note: --swarm flag UI-ONLY mode me ignore hua.');
+} else {
+  createBotAgent(0, botRuntimeConfig.BOT_USERNAME, true);
+  startEvolutionScheduler();
+  if (INITIAL_SWARM_COUNT > 1) {
+    evo.setMode(MODES.TRAINING);
+    startSwarm(INITIAL_SWARM_COUNT);
+  }
 }
 
 // ========================================

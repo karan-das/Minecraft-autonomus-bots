@@ -1,10 +1,18 @@
 {
   "name": "ai-bot-minecreaft",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "AI Minecraft Bot Swarm (Herobrain) + Web Control Dashboard",
+  "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --expose-gc --max-old-space-size=4096 bot.js --ui-only",
+    "start:bot": "node --expose-gc --max-old-space-size=4096 bot.js",
+    "start:swarm": "node --expose-gc --max-old-space-size=4096 bot.js --swarm 2",
+    "start:swarm4": "node --expose-gc --max-old-space-size=4096 bot.js --swarm 4",
+    "build:ui": "mkdir -p dist && cp dashboard.html dist/index.html",
+    "test": "node --check bot.js && node --check skills.js && node --check webui.js && echo \"ALL SYNTAX OK\""
+  },
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [],
   "author": "",
