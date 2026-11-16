@@ -1517,7 +1517,7 @@ function webSendChat(target, message) {
 
 try {
   require('./webui').startWebUI({
-    port: Number.parseInt(process.env.WEB_PORT || '3000', 10) || 3000,
+    port: Number.parseInt(process.env.PORT || '3000', 10) || 3000,
     getBotConfig: () => ({ ...botRuntimeConfig }),
     setBotConfig: (patch) => {
       if (patch.SERVER_HOST !== undefined) botRuntimeConfig.SERVER_HOST = String(patch.SERVER_HOST).trim();
