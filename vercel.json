@@ -2,11 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "bot.js",
+      "src": "server.js",
       "use": "@vercel/node"
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/bot.js" }
+    { "source": "/(.*)", "destination": "/server.js" }
   ]
 }

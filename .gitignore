@@ -1,4 +1,10 @@
-./st.txt
+st.txt
 /node_modules
 /old
 .env
+data/
+memory/
+bot-memory.json
+bot-config.json
+dist/
+*.log
