@@ -1,0 +1,816 @@
+{
+  "completedTasks": {
+    "craft_planks": 105,
+    "craft_sticks": 96,
+    "gather_initial_wood": 65,
+    "craft_wooden_pickaxe": 15,
+    "hunt_food": 1,
+    "gather_cobblestone": 179,
+    "coop_regroup_squad": 2,
+    "craft_wooden_sword": 11,
+    "craft_wooden_axe": 10,
+    "craft_stone_sword": 2,
+    "eat_food": 1,
+    "coop_share_dark_oak_log": 5,
+    "collect_dropped_items": 11
+  },
+  "failedTasks": {
+    "gather_initial_wood": 84,
+    "craft_sticks": 2806,
+    "craft_planks": 2264,
+    "gather_cobblestone": 2577,
+    "craft_wooden_pickaxe": 675,
+    "hunt_food": 51,
+    "cook_beef": 79,
+    "coop_regroup_squad": 4,
+    "craft_stone_pickaxe": 3,
+    "mine_iron_ore": 1,
+    "coop_share_dark_oak_log": 1,
+    "craft_wooden_axe": 3,
+    "craft_wooden_sword": 1,
+    "craft_stone_axe": 3,
+    "build_night_shelter": 1,
+    "collect_dropped_items": 49
+  },
+  "resources": {
+    "wood": {
+      "x": 177,
+      "y": 67,
+      "z": 101
+    }
+  },
+  "dangerousLocations": [],
+  "itemBlockKnowledge": {
+    "blocks": {
+      "oak_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "oak_planks",
+          "stick",
+          "crafting_table",
+          "charcoal"
+        ],
+        "collections": 17,
+        "successfulYields": 6,
+        "emptyYields": 11,
+        "avgDigMs": 3136,
+        "observedDrops": {
+          "oak_log": 5,
+          "wooden_pickaxe": 1,
+          "wooden_sword": 1,
+          "dark_oak_log": 21,
+          "apple": 1,
+          "dark_oak_planks": 12
+        },
+        "hazardIncidents": 0
+      },
+      "birch_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "birch_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 16,
+        "successfulYields": 6,
+        "emptyYields": 10,
+        "avgDigMs": 3122,
+        "observedDrops": {
+          "birch_log": 6
+        },
+        "hazardIncidents": 1
+      },
+      "spruce_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "spruce_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "stone": {
+        "role": "building_and_tools",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "cobblestone",
+        "transformsTo": [
+          "stone_pickaxe",
+          "furnace"
+        ],
+        "collections": 178,
+        "successfulYields": 24,
+        "emptyYields": 154,
+        "avgDigMs": 4552,
+        "observedDrops": {
+          "cobblestone": 23,
+          "dirt": 4
+        },
+        "hazardIncidents": 4
+      },
+      "cobblestone": {
+        "role": "building_and_tools",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "cobblestone",
+        "transformsTo": [
+          "stone_pickaxe",
+          "furnace"
+        ],
+        "collections": 4,
+        "successfulYields": 4,
+        "emptyYields": 0,
+        "avgDigMs": 4972,
+        "observedDrops": {
+          "dirt": 1,
+          "cobblestone": 5
+        },
+        "hazardIncidents": 0
+      },
+      "coal_ore": {
+        "role": "fuel_ore",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "coal",
+        "transformsTo": [
+          "torch",
+          "furnace_fuel"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "deepslate_coal_ore": {
+        "role": "fuel_ore",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "coal",
+        "transformsTo": [
+          "torch",
+          "furnace_fuel"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "iron_ore": {
+        "role": "metal_ore",
+        "bestTool": "pickaxe",
+        "minTier": "stone",
+        "expectedDrop": "raw_iron",
+        "transformsTo": [
+          "iron_ingot",
+          "iron_pickaxe",
+          "shield",
+          "bucket"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "deepslate_iron_ore": {
+        "role": "metal_ore",
+        "bestTool": "pickaxe",
+        "minTier": "stone",
+        "expectedDrop": "raw_iron",
+        "transformsTo": [
+          "iron_ingot"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "gold_ore": {
+        "role": "metal_ore",
+        "bestTool": "pickaxe",
+        "minTier": "iron",
+        "expectedDrop": "raw_gold",
+        "transformsTo": [
+          "gold_ingot",
+          "netherite_ingot"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "deepslate_gold_ore": {
+        "role": "metal_ore",
+        "bestTool": "pickaxe",
+        "minTier": "iron",
+        "expectedDrop": "raw_gold",
+        "transformsTo": [
+          "gold_ingot",
+          "netherite_ingot"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "nether_gold_ore": {
+        "role": "metal_ore",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "gold_nugget",
+        "transformsTo": [
+          "gold_ingot"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "diamond_ore": {
+        "role": "gem_ore",
+        "bestTool": "pickaxe",
+        "minTier": "iron",
+        "expectedDrop": "diamond",
+        "transformsTo": [
+          "diamond_pickaxe",
+          "diamond_armor"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "deepslate_diamond_ore": {
+        "role": "gem_ore",
+        "bestTool": "pickaxe",
+        "minTier": "iron",
+        "expectedDrop": "diamond",
+        "transformsTo": [
+          "diamond_pickaxe",
+          "diamond_armor"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "obsidian": {
+        "role": "portal_block",
+        "bestTool": "pickaxe",
+        "minTier": "diamond",
+        "expectedDrop": "obsidian",
+        "transformsTo": [
+          "nether_portal",
+          "enchanting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "ancient_debris": {
+        "role": "endgame_ore",
+        "bestTool": "pickaxe",
+        "minTier": "diamond",
+        "expectedDrop": "ancient_debris",
+        "transformsTo": [
+          "netherite_scrap",
+          "netherite_ingot",
+          "netherite_armor"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "gravel": {
+        "role": "utility_gravity",
+        "bestTool": "shovel",
+        "minTier": "hand",
+        "gravityAffected": true,
+        "expectedDrop": "gravel_or_flint",
+        "transformsTo": [
+          "flint",
+          "flint_and_steel"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "sand": {
+        "role": "building_gravity",
+        "bestTool": "shovel",
+        "minTier": "hand",
+        "gravityAffected": true,
+        "expectedDrop": "sand",
+        "transformsTo": [
+          "glass"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "netherrack": {
+        "role": "nether_terrain",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "expectedDrop": "netherrack",
+        "hazardNote": "Fast mine; watch for hidden lava pockets",
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "magma_block": {
+        "role": "hazard_block",
+        "bestTool": "pickaxe",
+        "minTier": "wooden",
+        "hazardNote": "Burns feet if stood on without sneaking",
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "dark_oak_log": {
+        "role": "learned_block",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [],
+        "collections": 377,
+        "successfulYields": 176,
+        "emptyYields": 201,
+        "avgDigMs": 3663,
+        "observedDrops": {
+          "dark_oak_log": 204,
+          "leaf_litter": 10,
+          "stick": 4,
+          "dark_oak_planks": 3,
+          "dark_oak_sapling": 1,
+          "birch_log": 6
+        },
+        "hazardIncidents": 9
+      },
+      "jungle_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "jungle_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "acacia_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "acacia_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "mangrove_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "mangrove_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "cherry_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "cherry_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "pale_oak_log": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "pale_oak_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "crimson_stem": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "crimson_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "warped_stem": {
+        "role": "wood",
+        "bestTool": "axe",
+        "minTier": "hand",
+        "transformsTo": [
+          "warped_planks",
+          "stick",
+          "crafting_table"
+        ],
+        "collections": 0,
+        "successfulYields": 0,
+        "emptyYields": 0,
+        "avgDigMs": null,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      },
+      "dirt": {
+        "role": "building",
+        "bestTool": "shovel",
+        "minTier": "hand",
+        "expectedDrop": "dirt",
+        "collections": 6,
+        "successfulYields": 2,
+        "emptyYields": 4,
+        "avgDigMs": 922,
+        "observedDrops": {
+          "dirt": 2
+        },
+        "hazardIncidents": 0
+      },
+      "grass_block": {
+        "role": "building",
+        "bestTool": "shovel",
+        "minTier": "hand",
+        "expectedDrop": "dirt",
+        "collections": 4,
+        "successfulYields": 0,
+        "emptyYields": 4,
+        "avgDigMs": 2407,
+        "observedDrops": {},
+        "hazardIncidents": 0
+      }
+    },
+    "items": {
+      "coal": {
+        "category": "fuel",
+        "smeltCapacity": 8,
+        "value": 3,
+        "uses": [
+          "smelting",
+          "torches"
+        ],
+        "timesCollected": 0
+      },
+      "charcoal": {
+        "category": "fuel",
+        "smeltCapacity": 8,
+        "value": 3,
+        "uses": [
+          "smelting",
+          "torches"
+        ],
+        "timesCollected": 0
+      },
+      "raw_iron": {
+        "category": "smeltable_ore",
+        "smeltsInto": "iron_ingot",
+        "value": 5,
+        "uses": [
+          "smelt_to_iron_ingot"
+        ],
+        "timesCollected": 0
+      },
+      "raw_gold": {
+        "category": "smeltable_ore",
+        "smeltsInto": "gold_ingot",
+        "value": 5,
+        "uses": [
+          "smelt_to_gold_ingot"
+        ],
+        "timesCollected": 0
+      },
+      "ancient_debris": {
+        "category": "smeltable_endgame",
+        "smeltsInto": "netherite_scrap",
+        "value": 10,
+        "uses": [
+          "smelt_to_netherite_scrap"
+        ],
+        "timesCollected": 0
+      },
+      "netherite_scrap": {
+        "category": "progression",
+        "craftsInto": "netherite_ingot",
+        "value": 10,
+        "uses": [
+          "craft_netherite_ingot_with_gold"
+        ],
+        "timesCollected": 0
+      },
+      "netherite_ingot": {
+        "category": "progression_endgame",
+        "value": 12,
+        "uses": [
+          "upgrade_diamond_to_netherite_at_smithing_table"
+        ],
+        "timesCollected": 0
+      },
+      "netherite_upgrade_smithing_template": {
+        "category": "progression_template",
+        "value": 12,
+        "uses": [
+          "smithing_slot_0_and_duplicate_with_7_diamonds"
+        ],
+        "timesCollected": 0
+      },
+      "flint": {
+        "category": "progression_utility",
+        "craftsInto": "flint_and_steel",
+        "value": 4,
+        "uses": [
+          "light_nether_portal"
+        ],
+        "timesCollected": 0
+      },
+      "flint_and_steel": {
+        "category": "portal_igniter",
+        "value": 6,
+        "uses": [
+          "ignite_obsidian_nether_portal"
+        ],
+        "timesCollected": 0
+      },
+      "water_bucket": {
+        "category": "clutch_and_casting",
+        "value": 7,
+        "uses": [
+          "mlg_fall_clutch",
+          "cast_lava_to_obsidian",
+          "extinguish_fire"
+        ],
+        "timesCollected": 0
+      },
+      "obsidian": {
+        "category": "portal_frame",
+        "value": 9,
+        "uses": [
+          "build_4x5_nether_portal"
+        ],
+        "timesCollected": 0
+      },
+      "diamond": {
+        "category": "progression",
+        "value": 9,
+        "uses": [
+          "diamond_pickaxe",
+          "diamond_sword",
+          "diamond_armor",
+          "duplicate_template"
+        ],
+        "timesCollected": 0
+      },
+      "iron_ingot": {
+        "category": "progression",
+        "value": 6,
+        "uses": [
+          "iron_pickaxe",
+          "shield",
+          "bucket",
+          "flint_and_steel",
+          "smithing_table",
+          "iron_armor"
+        ],
+        "timesCollected": 0
+      },
+      "dark_oak_planks": {
+        "category": "building",
+        "uses": [
+          "bridging_shelter_pillaring"
+        ],
+        "timesCollected": 15,
+        "value": 2,
+        "lastSeenFrom": "oak_log"
+      },
+      "dark_oak_log": {
+        "category": "wood_log",
+        "uses": [
+          "craft_planks_sticks_crafting_table"
+        ],
+        "timesCollected": 225,
+        "value": 2,
+        "lastSeenFrom": "dark_oak_log"
+      },
+      "stick": {
+        "category": "misc",
+        "uses": [],
+        "timesCollected": 4,
+        "value": 2,
+        "lastSeenFrom": "dark_oak_log"
+      },
+      "crafting_table": {
+        "category": "misc",
+        "uses": [],
+        "timesCollected": 0,
+        "value": 2
+      },
+      "leaf_litter": {
+        "category": "misc",
+        "uses": [],
+        "timesCollected": 10,
+        "value": 2,
+        "lastSeenFrom": "dark_oak_log"
+      },
+      "wooden_pickaxe": {
+        "category": "tool_or_weapon",
+        "uses": [],
+        "timesCollected": 1,
+        "value": 2,
+        "lastSeenFrom": "oak_log"
+      },
+      "oak_log": {
+        "category": "wood_log",
+        "uses": [
+          "craft_planks_sticks_crafting_table"
+        ],
+        "timesCollected": 5,
+        "value": 2,
+        "lastSeenFrom": "oak_log"
+      },
+      "oak_planks": {
+        "category": "building",
+        "uses": [
+          "bridging_shelter_pillaring"
+        ],
+        "timesCollected": 0,
+        "value": 2
+      },
+      "dirt": {
+        "category": "building",
+        "uses": [
+          "bridging_shelter_pillaring"
+        ],
+        "timesCollected": 7,
+        "value": 2,
+        "lastSeenFrom": "dirt"
+      },
+      "cobblestone": {
+        "category": "building",
+        "uses": [
+          "bridging_shelter_pillaring"
+        ],
+        "timesCollected": 28,
+        "value": 2,
+        "lastSeenFrom": "stone"
+      },
+      "wooden_sword": {
+        "category": "tool_or_weapon",
+        "uses": [],
+        "timesCollected": 1,
+        "value": 2,
+        "lastSeenFrom": "oak_log"
+      },
+      "wooden_axe": {
+        "category": "tool_or_weapon",
+        "uses": [],
+        "timesCollected": 0,
+        "value": 2
+      },
+      "stone_sword": {
+        "category": "tool_or_weapon",
+        "uses": [],
+        "timesCollected": 0,
+        "value": 2
+      },
+      "dark_oak_sapling": {
+        "category": "misc",
+        "uses": [],
+        "timesCollected": 1,
+        "value": 2,
+        "lastSeenFrom": "dark_oak_log"
+      },
+      "birch_log": {
+        "category": "wood_log",
+        "uses": [
+          "craft_planks_sticks_crafting_table"
+        ],
+        "timesCollected": 12,
+        "value": 2,
+        "lastSeenFrom": "dark_oak_log"
+      },
+      "birch_planks": {
+        "category": "building",
+        "uses": [
+          "bridging_shelter_pillaring"
+        ],
+        "timesCollected": 0,
+        "value": 2
+      },
+      "apple": {
+        "category": "food",
+        "uses": [
+          "restores_4_hunger"
+        ],
+        "timesCollected": 1,
+        "value": 2,
+        "lastSeenFrom": "oak_log"
+      },
+      "stone_pickaxe": {
+        "category": "tool_or_weapon",
+        "uses": [],
+        "timesCollected": 0,
+        "value": 2
+      }
+    },
+    "observations": 602
+  },
+  "portalPosition": null,
+  "decisions": 27120,
+  "stage": 2,
+  "basePosition": null,
+  "lastPosition": {
+    "x": 168,
+    "y": 64,
+    "z": 100
+  }
+}

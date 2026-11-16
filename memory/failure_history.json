@@ -1,0 +1,3686 @@
+[
+  {
+    "timestamp": 1794748255558,
+    "generation": 1,
+    "agentId": "GEN001_AGENT_09",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 2,
+      "goal": "initializing",
+      "attackerName": null,
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "unknown"
+    },
+    "actionParams": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "evidence": "unexpected_death"
+  },
+  {
+    "timestamp": 1794749038349,
+    "generation": 2,
+    "agentId": "GEN002_ELITE_03",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 2,
+      "goal": "thinking",
+      "attackerName": "Zombie",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.08,
+      0.07,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Zombie_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794749042883,
+    "generation": 2,
+    "agentId": "GEN002_ELITE_03",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6018823131048323,
+      0.7010554612511934,
+      0.6393289195617864,
+      0.4157204908968246
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749057551,
+    "generation": 2,
+    "agentId": "GEN002_ELITE_04",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "initializing",
+      "attackerName": "Creeper",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.16,
+      0.14,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Creeper_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794749069130,
+    "generation": 2,
+    "agentId": "GEN002_ELITE_03",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5184761617913193,
+      0.5850326855781424,
+      0.6157427177193646,
+      0.5045660180330587
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749097335,
+    "generation": 3,
+    "agentId": "GEN003_AGENT_29",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 2,
+      "goal": "thinking",
+      "attackerName": "Zombie",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 16,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.24,
+      0.21000000000000002,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Zombie_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794749100993,
+    "generation": 3,
+    "agentId": "GEN003_ES_PLUS_COOPERATION",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5733991989466007,
+      0.7528817067742638,
+      0.36328724632242254,
+      0.484451263579802
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749103820,
+    "generation": 3,
+    "agentId": "GEN003_AGENT_29",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.47951307774656565,
+      0.4664086749180062,
+      0.46166912712654706,
+      0.44342034049145723
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749125013,
+    "generation": 4,
+    "agentId": "GEN004_ELITE_04",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 4
+    },
+    "actionParams": [
+      0.6568126654754051,
+      0.5444031344415934,
+      0.43958251186153446,
+      0.46921579300842936
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749178003,
+    "generation": 5,
+    "agentId": "GEN005_AGENT_31",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.39310613971346936,
+      0.713987501997053,
+      0.470431888912451,
+      0.3841980549564544
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749232301,
+    "generation": 6,
+    "agentId": "GEN006_ES_PLUS_TRAPS",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.3712217159692731,
+      0.8979293371309558,
+      0.4692728907088907,
+      0.6688577135179636
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749260664,
+    "generation": 7,
+    "agentId": "GEN007_ES_MINUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.757015528572995,
+      0.5411268107058487,
+      0.3034064320547875,
+      0.6041486167322206
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749273636,
+    "generation": 7,
+    "agentId": "GEN007_ES_PLUS_SURVIVAL",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.6846396944086747,
+      0.5653076412097714,
+      0.5133355123241081,
+      0.679562425567004
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749278952,
+    "generation": 7,
+    "agentId": "GEN007_ES_MINUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Skeleton",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.32,
+      0.28,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Skeleton_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794749293323,
+    "generation": 7,
+    "agentId": "GEN007_ES_PLUS_SURVIVAL",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.5625894270481803,
+      0.6188356643080243,
+      0.5123478856638564,
+      0.8144494498105924
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749298569,
+    "generation": 8,
+    "agentId": "GEN008_ES_PLUS_TRAPS",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5726959642605898,
+      0.27941976389752055,
+      0.5591984444995879,
+      0.7928035347323964
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794749298615,
+    "generation": 8,
+    "agentId": "GEN008_ES_MINUS_MLG",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.44267986582445923,
+      0.6611284190432097,
+      0.4923989377616875,
+      0.6912167891748031
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749305179,
+    "generation": 8,
+    "agentId": "GEN008_ES_MINUS_MLG",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.5328488486760081,
+      0.6861693377511618,
+      0.5555736003878646,
+      0.6467935745609028
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749309773,
+    "generation": 8,
+    "agentId": "GEN008_ES_MINUS_MLG",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.42875076962432895,
+      0.7124179378179454,
+      0.4384952933664431,
+      0.6492157991340641
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794749322693,
+    "generation": 8,
+    "agentId": "GEN008_ES_MINUS_MLG",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 16,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794750186889,
+    "generation": 9,
+    "agentId": "GEN009_AGENT_31",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5831339918180874,
+      0.8799840195290256,
+      0.8098314525196572,
+      0.737524548793496
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750202540,
+    "generation": 9,
+    "agentId": "GEN009_AGENT_31",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.49455115872646166,
+      0.98,
+      0.7297158560671481,
+      0.7146463952105043
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750207322,
+    "generation": 9,
+    "agentId": "GEN009_AGENT_31",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 2.05,
+      "elapsedMs": 761,
+      "startY": 64.42,
+      "endY": 59
+    },
+    "actionParams": [
+      0.3976728298088824,
+      0.26958289138971686,
+      0.416486636445097,
+      0.2427182728161082
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794750218145,
+    "generation": 10,
+    "agentId": "GEN010_ES_PLUS_COOPERATION",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.4610120180091265,
+      0.9232082470755902,
+      0.7386270300278663,
+      0.7501183832209827
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750222909,
+    "generation": 10,
+    "agentId": "GEN010_AGENT_30",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.43071610745248035,
+      0.8783312149444747,
+      0.6555271258532881,
+      0.7545310046506085
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750236965,
+    "generation": 10,
+    "agentId": "GEN010_ES_PLUS_COOPERATION",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5974617610301317,
+      0.8417572098470102,
+      0.7019358201555472,
+      0.6418303280678604
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750237957,
+    "generation": 10,
+    "agentId": "GEN010_ES_PLUS_COOPERATION",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5413935487680701,
+      0.8950654643942172,
+      0.6260324827930526,
+      0.7212356944163533
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750249987,
+    "generation": 10,
+    "agentId": "GEN010_ES_PLUS_COOPERATION",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5431489455418352,
+      0.6679496216362102,
+      0.6713727866186113,
+      0.648758436070363
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750253042,
+    "generation": 11,
+    "agentId": "GEN011_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.4372783976585219,
+      0.7866840029199943,
+      0.6935555979146265,
+      0.630345385198242
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750301731,
+    "generation": 12,
+    "agentId": "GEN012_ES_MINUS_EXPLORATION",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.4512612060149312,
+      0.6731544349549705,
+      0.5532275458626718,
+      0.6392129264459052
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750310409,
+    "generation": 12,
+    "agentId": "GEN012_ES_MINUS_EXPLORATION",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.5,
+    "healthDelta": -2.5,
+    "resourcesUsed": 0,
+    "situation": {
+      "elapsedMs": 3649,
+      "outcome": "jump_timeout"
+    },
+    "actionParams": [
+      0.3457126929754348,
+      0.24142098157776554,
+      0.4203576833059636,
+      0.2598584360434915
+    ],
+    "evidence": "parkour_timeout"
+  },
+  {
+    "timestamp": 1794750319021,
+    "generation": 12,
+    "agentId": "GEN012_ES_MINUS_EXPLORATION",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.423868451145076,
+      0.8081528925664231,
+      0.4915162588888245,
+      0.6402070059044881
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750337785,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.35654463606097553,
+      0.8492374084946613,
+      0.4099809885234922,
+      0.6730046178294662
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750343759,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.6192507334336245,
+      0.8137260091532456,
+      0.36535522884476207,
+      0.5434415821812495
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750349776,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.44965829145725844,
+      0.6374382736760039,
+      0.33985408131847566,
+      0.6054314143452477
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750356211,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.46167272631629463,
+      0.7839654619160604,
+      0.3287302035706725,
+      0.6293640227395912
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750360287,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "building",
+    "success": false,
+    "reward": -0.3,
+    "healthDelta": 0,
+    "resourcesUsed": 3,
+    "situation": {
+      "task": "shelter",
+      "blocksPlaced": 3
+    },
+    "actionParams": [
+      0.8,
+      0.7,
+      0.8,
+      0.8
+    ],
+    "evidence": null
+  },
+  {
+    "timestamp": 1794750385423,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.45394853532920376,
+      0.8387549897290868,
+      0.39012197386683095,
+      0.7243264376200577
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750391631,
+    "generation": 13,
+    "agentId": "GEN013_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.609242562602448,
+      0.8397467408146272,
+      0.3285604228611514,
+      0.5999015295595608
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750434535,
+    "generation": 15,
+    "agentId": "GEN015_ES_PLUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.6829346425637494,
+      0.831880527569749,
+      0.3968402187792122,
+      0.5701731581825116
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750455429,
+    "generation": 15,
+    "agentId": "GEN015_ES_PLUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.5388864621734393,
+      0.9339453234125764,
+      0.393903652670736,
+      0.6304449228557418
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750460977,
+    "generation": 15,
+    "agentId": "GEN015_ES_PLUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7368283280787983,
+      0.8943990117385268,
+      0.46410491607159327,
+      0.6143176007145672
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750466904,
+    "generation": 15,
+    "agentId": "GEN015_ES_PLUS_PVP",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.6555665926093098,
+      0.8482569153307095,
+      0.4646724150867911,
+      0.5746086842208578
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794750500986,
+    "generation": 16,
+    "agentId": "GEN016_ES_MINUS_PVP",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 15,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794750515129,
+    "generation": 16,
+    "agentId": "GEN016_ES_MINUS_PVP",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.601391031775912,
+      0.9573385011307646,
+      0.541956569048431,
+      0.6883860250136828
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750518871,
+    "generation": 17,
+    "agentId": "GEN017_ES_PLUS_PARKOUR",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7393261787684884,
+      0.7870722506289872,
+      0.29736264142357005,
+      0.6325635981327257
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750583006,
+    "generation": 18,
+    "agentId": "GEN018_ES_PLUS_TRAPS",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8023872082955111,
+      0.8256501880621574,
+      0.3560640791064672,
+      0.5266354125520822
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750628787,
+    "generation": 18,
+    "agentId": "GEN018_ES_PLUS_TRAPS",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 1.96,
+      "elapsedMs": 1543,
+      "startY": 63.42,
+      "endY": 62
+    },
+    "actionParams": [
+      0.5182168785022451,
+      0.35831503732261166,
+      0.18968443461630968,
+      0.49207774473264015
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794750634029,
+    "generation": 18,
+    "agentId": "GEN018_ES_MINUS_TRAPS",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 2.7,
+      "elapsedMs": 707,
+      "startY": 63.42,
+      "endY": 62
+    },
+    "actionParams": [
+      0.5533525655806901,
+      0.3544856841946598,
+      0.3076212501440472,
+      0.2652653505394424
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794750634716,
+    "generation": 18,
+    "agentId": "GEN018_ES_PLUS_TRAPS",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.5,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "elapsedMs": 3615,
+      "outcome": "jump_timeout"
+    },
+    "actionParams": [
+      0.579030006701417,
+      0.28848836097294595,
+      0.26930419362174657,
+      0.49471001000165654
+    ],
+    "evidence": "parkour_timeout"
+  },
+  {
+    "timestamp": 1794750639084,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6884929078217374,
+      0.7786289490798572,
+      0.3940316972415908,
+      0.5710642728390103
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750647555,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.716128914459291,
+      0.7581555273843004,
+      0.3467180962473399,
+      0.662531381097875
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750652128,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6356899643488556,
+      0.8055618771908424,
+      0.19696551554781727,
+      0.6844200978513783
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750675678,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6544862589095048,
+      0.7198707911618238,
+      0.44612839422506856,
+      0.6370082556816695
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750675874,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6398838959608922,
+      0.7703040773173272,
+      0.31922714024209703,
+      0.6490738460912109
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750678005,
+    "generation": 19,
+    "agentId": "GEN019_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6363433216486803,
+      0.42971553503568927,
+      0.40212960752272764,
+      0.47629552917924106
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750702319,
+    "generation": 20,
+    "agentId": "GEN020_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6278418954074135,
+      0.45684710995053157,
+      0.370723674204302,
+      0.5014831315550842
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794750814446,
+    "generation": 20,
+    "agentId": "GEN020_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Enderman",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 15,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Enderman_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794751117169,
+    "generation": 21,
+    "agentId": "GEN021_ELITE_05",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.714534143332521,
+      0.7925904225314139,
+      0.4012448809272263,
+      0.6035988636173736
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751178302,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7594031343294873,
+      0.7163658904347204,
+      0.425273954027255,
+      0.6086175455462501
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751193852,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7534838000354958,
+      0.7473079485246482,
+      0.3426666224467918,
+      0.607066460742065
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751200137,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7743441722973032,
+      0.7899033409088732,
+      0.38242105539359933,
+      0.5780181086716845
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751206460,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.8509054245247926,
+      0.6901408989773289,
+      0.3413899209725669,
+      0.49777270016914027
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751224373,
+    "generation": 22,
+    "agentId": "GEN022_ELITE_04",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Skeleton",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 16,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0,
+      0
+    ],
+    "evidence": "killed_by_Skeleton_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794751225600,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.8195090110299234,
+      0.736333209952102,
+      0.3016218390117874,
+      0.5073423104400475
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751232033,
+    "generation": 22,
+    "agentId": "GEN022_ELITE_04",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8097620551768794,
+      0.7924326949405222,
+      0.48106677387718444,
+      0.5547371601123746
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751233287,
+    "generation": 22,
+    "agentId": "GEN022_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7414038469210706,
+      0.5159467263869341,
+      0.4409047165172008,
+      0.5060279765609071
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751242398,
+    "generation": 23,
+    "agentId": "GEN023_ELITE_05",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7147633483206939,
+      0.7540249979713087,
+      0.3628178376961183,
+      0.6457749952954037
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751250708,
+    "generation": 23,
+    "agentId": "GEN023_ELITE_05",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.5024237384794942,
+      0.7552889638239586,
+      0.3183635797139889,
+      0.6364760721164247
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751253149,
+    "generation": 23,
+    "agentId": "GEN023_ELITE_05",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.6116203767560912,
+      0.8347644755946788,
+      0.25262986526053516,
+      0.7468656241959888
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751256813,
+    "generation": 23,
+    "agentId": "GEN023_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5693882619005052,
+      0.8998904081442954,
+      0.49802631330239855,
+      0.6825497319228517
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751271415,
+    "generation": 23,
+    "agentId": "GEN023_ELITE_05",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.49585851103628276,
+      0.8419646257176047,
+      0.21274947149396461,
+      0.7541725728680875
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751277711,
+    "generation": 24,
+    "agentId": "GEN024_AGENT_28",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.5333943701163489,
+      0.8893181554806655,
+      0.20555103021645543,
+      0.7799001547059192
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751287987,
+    "generation": 24,
+    "agentId": "GEN024_AGENT_28",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7432716011383481,
+      0.7886477894863004,
+      0.452485679697328,
+      0.6400228140565184
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751293878,
+    "generation": 24,
+    "agentId": "GEN024_AGENT_28",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.8450883761576132,
+      0.7580642010241314,
+      0.42976534701968344,
+      0.6087092212512851
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751300287,
+    "generation": 24,
+    "agentId": "GEN024_AGENT_28",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.760934644502355,
+      0.7460151563875302,
+      0.4870114636067442,
+      0.6708842028807722
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751316854,
+    "generation": 25,
+    "agentId": "GEN025_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6819012343715668,
+      0.9242897260379644,
+      0.5587167919376117,
+      0.7215687221980291
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751326236,
+    "generation": 25,
+    "agentId": "GEN025_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6707791660720058,
+      0.8953841042758417,
+      0.44495134830905547,
+      0.7892236489341304
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751332186,
+    "generation": 25,
+    "agentId": "GEN025_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6294294689020468,
+      0.8761523368137882,
+      0.5332974240257345,
+      0.7712191101154215
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751352415,
+    "generation": 26,
+    "agentId": "GEN026_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7110754086379312,
+      0.8574509196712502,
+      0.4911170327595649,
+      0.708769237967831
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751360291,
+    "generation": 26,
+    "agentId": "GEN026_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7518605276472418,
+      0.7164348943649312,
+      0.553123441789594,
+      0.6388141035183783
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751366180,
+    "generation": 26,
+    "agentId": "GEN026_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.7661622570513623,
+      0.7138492083789285,
+      0.45525716597919047,
+      0.6122359242378175
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751372214,
+    "generation": 26,
+    "agentId": "GEN026_AGENT_32",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.4,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_cobblestone",
+      "cobblestone": 0
+    },
+    "actionParams": [
+      0.8430172575911947,
+      0.8380438871350828,
+      0.37961518528437466,
+      0.6601424852099104
+    ],
+    "evidence": "cobblestone_failed"
+  },
+  {
+    "timestamp": 1794751391172,
+    "generation": 26,
+    "agentId": "GEN026_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "defense",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Zombie",
+      "falling": false,
+      "creeperNearby": true,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "died_to_creeper_explosion"
+  },
+  {
+    "timestamp": 1794751403894,
+    "generation": 26,
+    "agentId": "GEN026_ES_PLUS_BUILDING",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7681770493793327,
+      0.9024674400336956,
+      0.34427403237564047,
+      0.6996619723384482
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751419272,
+    "generation": 27,
+    "agentId": "GEN027_GRAFTED_01",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8418905191178331,
+      0.8234227117646555,
+      0.3182317036459855,
+      0.7096402800849421
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751432055,
+    "generation": 27,
+    "agentId": "GEN027_GRAFTED_01",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6718064615459626,
+      0.8730798409958282,
+      0.3913848979651083,
+      0.7917750736011906
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751443113,
+    "generation": 27,
+    "agentId": "GEN027_GRAFTED_01",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6202057870477323,
+      0.8669831273345657,
+      0.3873151195777426,
+      0.7646903201397846
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794751673759,
+    "generation": 29,
+    "agentId": "GEN029_AGENT_25",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.5,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "elapsedMs": 3627,
+      "outcome": "jump_timeout"
+    },
+    "actionParams": [
+      0.6231463718976812,
+      0.4294187765933139,
+      0.34915070060534426,
+      0.34663585352491066
+    ],
+    "evidence": "parkour_timeout"
+  },
+  {
+    "timestamp": 1794751694082,
+    "generation": 29,
+    "agentId": "GEN029_AGENT_25",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 3.01,
+      "elapsedMs": 658,
+      "startY": 63.42,
+      "endY": 62
+    },
+    "actionParams": [
+      0.5288102022805122,
+      0.43709059549082574,
+      0.4094152129151788,
+      0.3216571032619051
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794752179745,
+    "generation": 29,
+    "agentId": "GEN029_AGENT_25",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 16,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794752200626,
+    "generation": 30,
+    "agentId": "GEN030_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7001218651153084,
+      0.7068269740289362,
+      0.4625317515999289,
+      0.6800377660701517
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794752208361,
+    "generation": 30,
+    "agentId": "GEN030_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6533939940976692,
+      0.8409063170090237,
+      0.31622213672009697,
+      0.6943095951948814
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794752212115,
+    "generation": 30,
+    "agentId": "GEN030_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6167136132097512,
+      0.89752136411261,
+      0.36282862934248,
+      0.7174210839834209
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794752230934,
+    "generation": 30,
+    "agentId": "GEN030_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5561241423720447,
+      0.8579513020563416,
+      0.3767160793678333,
+      0.7037130697795382
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794752236932,
+    "generation": 30,
+    "agentId": "GEN030_AGENT_26",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6134093453547567,
+      0.8089870396609421,
+      0.28356918044742974,
+      0.6516452943654231
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794752251296,
+    "generation": 31,
+    "agentId": "GEN031_AGENT_31",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Spider",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 16,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_Spider_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794752261755,
+    "generation": 31,
+    "agentId": "GEN031_AGENT_31",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8342155331165819,
+      0.6954658008686182,
+      0.4448777203384115,
+      0.6793250635627985
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755086816,
+    "generation": 31,
+    "agentId": "GEN031_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "initializing",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794755102762,
+    "generation": 31,
+    "agentId": "GEN031_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6988720592418538,
+      0.8709584532532944,
+      0.42596794878787353,
+      0.6779888896810643
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755113473,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6765423302699998,
+      0.893341640702718,
+      0.29151705141447554,
+      0.7251989874012165
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755120660,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 2.19,
+      "elapsedMs": 674,
+      "startY": 63.42,
+      "endY": 62
+    },
+    "actionParams": [
+      0.37564960825643284,
+      0.3993056083632389,
+      0.5404332696024469,
+      0.40791880785854817
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794755132355,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7384434349416016,
+      0.9386320662770974,
+      0.32182713087209913,
+      0.8512135517663629
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755138867,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.5,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "elapsedMs": 3610,
+      "outcome": "jump_timeout"
+    },
+    "actionParams": [
+      0.30730100076041283,
+      0.37835065809273605,
+      0.5155923901749198,
+      0.4448002802630604
+    ],
+    "evidence": "parkour_timeout"
+  },
+  {
+    "timestamp": 1794755148499,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7372680524657064,
+      0.9087256738095747,
+      0.4839967198262085,
+      0.8284037133057465
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755155190,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6908292183454416,
+      0.9140349966611228,
+      0.4562684929672138,
+      0.8349920198234362
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755158161,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Drowned",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 19,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_Drowned_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794755168659,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "exploration",
+    "success": false,
+    "reward": -0.35,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "targetX": 178,
+      "targetZ": 89
+    },
+    "actionParams": [
+      0.7675596935031103,
+      0.5,
+      0.6081653340009601,
+      0.5
+    ],
+    "evidence": "exploration_path_failed"
+  },
+  {
+    "timestamp": 1794755168659,
+    "generation": 32,
+    "agentId": "GEN032_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8348260420473956,
+      0.8475807899966022,
+      0.474605317833689,
+      0.7961679605472028
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755217515,
+    "generation": 34,
+    "agentId": "GEN034_AGENT_27",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "craft_wooden_pickaxe",
+      "attackerName": "Creeper",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_Creeper_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794755225182,
+    "generation": 34,
+    "agentId": "GEN034_GRAFTED_01",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7570224223756642,
+      0.9213626509292199,
+      0.3432017270715806,
+      0.8118520688634604
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755225893,
+    "generation": 34,
+    "agentId": "GEN034_GRAFTED_01",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8773554677514784,
+      0.8643561551793894,
+      0.4470392523142945,
+      0.6547940591588701
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755231401,
+    "generation": 34,
+    "agentId": "GEN034_AGENT_27",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": -3,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 1.39,
+      "elapsedMs": 725,
+      "startY": 64.42,
+      "endY": 64
+    },
+    "actionParams": [
+      0.443304419686661,
+      0.3339595624689854,
+      0.5331267644671933,
+      0.47384153575640253
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794755235564,
+    "generation": 34,
+    "agentId": "GEN034_AGENT_27",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7867874271084415,
+      0.9122983068633278,
+      0.5019122698426011,
+      0.7894925211392407
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755241025,
+    "generation": 34,
+    "agentId": "GEN034_GRAFTED_01",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8918551861197107,
+      0.8285619442559583,
+      0.3905709712973534,
+      0.5815786360206036
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755241914,
+    "generation": 34,
+    "agentId": "GEN034_GRAFTED_01",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8851894483496653,
+      0.8604219270540913,
+      0.40409997190179325,
+      0.5977215339227548
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755242285,
+    "generation": 34,
+    "agentId": "GEN034_AGENT_27",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 1.18,
+      "elapsedMs": 867,
+      "startY": 58.42,
+      "endY": 57
+    },
+    "actionParams": [
+      0.4524802957240653,
+      0.3381770967226856,
+      0.5229514118991557,
+      0.3875329981284797
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794755242487,
+    "generation": 34,
+    "agentId": "GEN034_GRAFTED_01",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8126664531915434,
+      0.8083924737919675,
+      0.47348814265596406,
+      0.6169293288414861
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755250221,
+    "generation": 35,
+    "agentId": "GEN035_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8148738399296452,
+      0.8506739634032343,
+      0.4714806374015074,
+      0.6391470802370908
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755319997,
+    "generation": 37,
+    "agentId": "GEN037_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Zombie",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_Zombie_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794755324081,
+    "generation": 37,
+    "agentId": "GEN037_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8320899647722542,
+      0.7373595231200261,
+      0.2956587967941691,
+      0.5897024324459792
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755333322,
+    "generation": 37,
+    "agentId": "GEN037_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "Zombie",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 19,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_Zombie_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794755349346,
+    "generation": 37,
+    "agentId": "GEN037_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.778171050431549,
+      0.7207380234497749,
+      0.4120331044782855,
+      0.6467759948488189
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755364770,
+    "generation": 38,
+    "agentId": "GEN038_ES_PLUS_PARKOUR",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8240668166573007,
+      0.6531609050545854,
+      0.5037507519453349,
+      0.4021988103084585
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755376647,
+    "generation": 38,
+    "agentId": "GEN038_ES_PLUS_PARKOUR",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7170114977888942,
+      0.5527409768744798,
+      0.6153732618646423,
+      0.4395960398596158
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755403072,
+    "generation": 39,
+    "agentId": "GEN039_ES_PLUS_EXPLORATION",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8345073175639499,
+      0.6150911922703728,
+      0.5444090220082894,
+      0.465283598172779
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794755424525,
+    "generation": 39,
+    "agentId": "GEN039_ES_MINUS_SURVIVAL",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "parkour",
+    "success": false,
+    "reward": -0.8,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "horizontalDistance": 2,
+      "elapsedMs": 652,
+      "startY": 58.42,
+      "endY": 57
+    },
+    "actionParams": [
+      0.5154347486549506,
+      0.33651244873793446,
+      0.48390271500168897,
+      0.5060618358570933
+    ],
+    "evidence": "parkour_landing_damage"
+  },
+  {
+    "timestamp": 1794756019587,
+    "generation": 42,
+    "agentId": "GEN042_AGENT_30",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "initializing",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 14,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794756022323,
+    "generation": 42,
+    "agentId": "GEN042_AGENT_30",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8098892640971538,
+      0.8041668246302105,
+      0.6699704373314559,
+      0.530838482830471
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794756937570,
+    "generation": 42,
+    "agentId": "GEN042_ELITE_02",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7128333771922373,
+      0.7840751881685413,
+      0.4734887473063289,
+      0.6121255154732747
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794756944054,
+    "generation": 42,
+    "agentId": "GEN042_ELITE_02",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7315485662300802,
+      0.7711666717112571,
+      0.49451046600524873,
+      0.6563341808176888
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794756974325,
+    "generation": 42,
+    "agentId": "GEN042_ELITE_03",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "initializing",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794756992956,
+    "generation": 43,
+    "agentId": "GEN043_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.9284413641949075,
+      0.7201840185669208,
+      0.3953014911183372,
+      0.530795209844731
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794756999477,
+    "generation": 43,
+    "agentId": "GEN043_ELITE_02",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.8979838638328034,
+      0.6898516762341939,
+      0.39231881428647414,
+      0.4882031272441806
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794757319685,
+    "generation": 45,
+    "agentId": "GEN045_AGENT_32",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794757325402,
+    "generation": 45,
+    "agentId": "GEN045_AGENT_29",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "pvp",
+    "success": false,
+    "reward": -2.4,
+    "healthDelta": -20,
+    "resourcesUsed": 0,
+    "situation": {
+      "stage": 1,
+      "goal": "thinking",
+      "attackerName": "kzix",
+      "falling": false,
+      "creeperNearby": false,
+      "inLavaOrFire": false,
+      "food": 17,
+      "cause": "slain"
+    },
+    "actionParams": [
+      0.35,
+      0.35,
+      0.25,
+      0
+    ],
+    "evidence": "killed_by_kzix_need_earlier_retreat_or_dodge"
+  },
+  {
+    "timestamp": 1794757335481,
+    "generation": 46,
+    "agentId": "GEN046_AGENT_28",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7762323259456633,
+      0.8487813912754207,
+      0.5845897287450059,
+      0.5507807227157392
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794757338532,
+    "generation": 46,
+    "agentId": "GEN046_AGENT_24",
+    "agentSlot": 1,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7649866653306012,
+      0.8143890838629547,
+      0.6038383580187957,
+      0.3725314850517423
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794757385858,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.7221130451755915,
+      0.8388158692009365,
+      0.4132601066375871,
+      0.5319013460598115
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794757385858,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6053394200408793,
+      0.8979815943982475,
+      0.6003127802451065,
+      0.6124536600628473
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758398461,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5980367881884394,
+      0.7320320033525927,
+      0.5501182681768013,
+      0.5981708449119115
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758398477,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5702665806044697,
+      0.7711956293764526,
+      0.47793651193883424,
+      0.5522827087074953
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758401341,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.5669663828982183,
+      0.7396086633547294,
+      0.5260977249407367,
+      0.6258748845995524
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758401878,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6936396564161817,
+      0.7938238966417811,
+      0.4194038975430508,
+      0.5376708620130252
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758402743,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6347616319853654,
+      0.7332142901027455,
+      0.5888619391820904,
+      0.5774630260035456
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758403580,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.677018961184613,
+      0.7155545849906244,
+      0.5945697110241439,
+      0.5673863038916283
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758406160,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6816623676290948,
+      0.7407771525588015,
+      0.5719471190015581,
+      0.5683605856268368
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758406985,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6557873404722856,
+      0.8455146841692843,
+      0.6226832333505118,
+      0.6483704550173601
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758407852,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6620315647408527,
+      0.8861845599443883,
+      0.5578436830038157,
+      0.6405178855949187
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758408687,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6768776757226445,
+      0.8653501997531166,
+      0.531777029239393,
+      0.65320517490094
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758410006,
+    "generation": 47,
+    "agentId": "GEN047_AGENT_25",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6454376064791254,
+      0.8806634791750674,
+      0.5933452045623125,
+      0.6569299718128088
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758415593,
+    "generation": 48,
+    "agentId": "GEN048_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6372063824531632,
+      0.8596493191581432,
+      0.5919448372894175,
+      0.623384751176327
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758417897,
+    "generation": 48,
+    "agentId": "GEN048_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.6379315256274157,
+      0.8792668765143908,
+      0.5958431602225223,
+      0.6405746801149975
+    ],
+    "evidence": "wood_failed"
+  },
+  {
+    "timestamp": 1794758417897,
+    "generation": 48,
+    "agentId": "GEN048_AGENT_24",
+    "agentSlot": 0,
+    "mode": "TRAINING",
+    "skill": "survival",
+    "success": false,
+    "reward": -0.45,
+    "healthDelta": 0,
+    "resourcesUsed": 0,
+    "situation": {
+      "task": "gather_wood",
+      "logsAfter": 0
+    },
+    "actionParams": [
+      0.813386027590437,
+      0.9377443873634702,
+      0.5592404658347642,
+      0.5544094417137522
+    ],
+    "evidence": "wood_failed"
+  }
+]

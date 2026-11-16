@@ -1,0 +1,74 @@
+{
+  "mlg": {
+    "score": 0,
+    "attempts": 0,
+    "successes": 0,
+    "failures": 0,
+    "avgReward": 0,
+    "lastEvaluatedGen": 0
+  },
+  "pvp": {
+    "score": 0.6042,
+    "attempts": 48,
+    "successes": 29,
+    "failures": 19,
+    "avgReward": 1.3541,
+    "lastEvaluatedGen": 46
+  },
+  "traps": {
+    "score": 0,
+    "attempts": 0,
+    "successes": 0,
+    "failures": 0,
+    "avgReward": 0,
+    "lastEvaluatedGen": 0
+  },
+  "defense": {
+    "score": 0,
+    "attempts": 1,
+    "successes": 0,
+    "failures": 1,
+    "avgReward": -0.192,
+    "lastEvaluatedGen": 26
+  },
+  "parkour": {
+    "score": 0.9688,
+    "attempts": 385,
+    "successes": 373,
+    "failures": 12,
+    "avgReward": 1.0586,
+    "lastEvaluatedGen": 48
+  },
+  "building": {
+    "score": 0,
+    "attempts": 1,
+    "successes": 0,
+    "failures": 1,
+    "avgReward": -0.024,
+    "lastEvaluatedGen": 13
+  },
+  "survival": {
+    "score": 0.6238,
+    "attempts": 319,
+    "successes": 199,
+    "failures": 120,
+    "avgReward": -0.1574,
+    "lastEvaluatedGen": 48
+  },
+  "exploration": {
+    "score": 0.5,
+    "attempts": 2,
+    "successes": 1,
+    "failures": 1,
+    "avgReward": 0.0125,
+    "lastEvaluatedGen": 32
+  },
+  "cooperation": {
+    "score": 1,
+    "attempts": 22,
+    "successes": 22,
+    "failures": 0,
+    "avgReward": 1.9256,
+    "lastEvaluatedGen": 42
+  }
+}

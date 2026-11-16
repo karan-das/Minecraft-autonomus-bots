@@ -1,0 +1,290 @@
+[
+  {
+    "generation": 1,
+    "best": 0.6067,
+    "avg": 0.575,
+    "champion": 0.6067
+  },
+  {
+    "generation": 2,
+    "best": 0.6028,
+    "avg": 0.5843,
+    "champion": 0.6067
+  },
+  {
+    "generation": 3,
+    "best": 0.6033,
+    "avg": 0.5835,
+    "champion": 0.6067
+  },
+  {
+    "generation": 4,
+    "best": 0.6046,
+    "avg": 0.588,
+    "champion": 0.6067
+  },
+  {
+    "generation": 5,
+    "best": 0.609,
+    "avg": 0.592,
+    "champion": 0.609
+  },
+  {
+    "generation": 6,
+    "best": 0.619,
+    "avg": 0.6056,
+    "champion": 0.619
+  },
+  {
+    "generation": 7,
+    "best": 0.63,
+    "avg": 0.6121,
+    "champion": 0.63
+  },
+  {
+    "generation": 8,
+    "best": 0.6255,
+    "avg": 0.6137,
+    "champion": 0.63
+  },
+  {
+    "generation": 9,
+    "best": 0.6321,
+    "avg": 0.6162,
+    "champion": 0.6321
+  },
+  {
+    "generation": 10,
+    "best": 0.6361,
+    "avg": 0.6216,
+    "champion": 0.6361
+  },
+  {
+    "generation": 11,
+    "best": 0.644,
+    "avg": 0.6219,
+    "champion": 0.644
+  },
+  {
+    "generation": 12,
+    "best": 0.6513,
+    "avg": 0.6418,
+    "champion": 0.6513
+  },
+  {
+    "generation": 13,
+    "best": 0.6607,
+    "avg": 0.6489,
+    "champion": 0.6607
+  },
+  {
+    "generation": 14,
+    "best": 0.67,
+    "avg": 0.6578,
+    "champion": 0.67
+  },
+  {
+    "generation": 15,
+    "best": 0.6785,
+    "avg": 0.6682,
+    "champion": 0.6785
+  },
+  {
+    "generation": 16,
+    "best": 0.6866,
+    "avg": 0.6773,
+    "champion": 0.6866
+  },
+  {
+    "generation": 17,
+    "best": 0.6904,
+    "avg": 0.6837,
+    "champion": 0.6904
+  },
+  {
+    "generation": 18,
+    "best": 0.6999,
+    "avg": 0.6896,
+    "champion": 0.6999
+  },
+  {
+    "generation": 19,
+    "best": 0.7073,
+    "avg": 0.7007,
+    "champion": 0.7073
+  },
+  {
+    "generation": 20,
+    "best": 0.7119,
+    "avg": 0.7062,
+    "champion": 0.7119
+  },
+  {
+    "generation": 21,
+    "best": 0.7168,
+    "avg": 0.7094,
+    "champion": 0.7168
+  },
+  {
+    "generation": 22,
+    "best": 0.7227,
+    "avg": 0.715,
+    "champion": 0.7227
+  },
+  {
+    "generation": 23,
+    "best": 0.7257,
+    "avg": 0.7204,
+    "champion": 0.7257
+  },
+  {
+    "generation": 24,
+    "best": 0.7264,
+    "avg": 0.7215,
+    "champion": 0.7264
+  },
+  {
+    "generation": 25,
+    "best": 0.7385,
+    "avg": 0.7301,
+    "champion": 0.7385
+  },
+  {
+    "generation": 26,
+    "best": 0.7564,
+    "avg": 0.7341,
+    "champion": 0.7564
+  },
+  {
+    "generation": 27,
+    "best": 0.7528,
+    "avg": 0.7324,
+    "champion": 0.7564
+  },
+  {
+    "generation": 28,
+    "best": 0.7527,
+    "avg": 0.7365,
+    "champion": 0.7564
+  },
+  {
+    "generation": 29,
+    "best": 0.7531,
+    "avg": 0.7372,
+    "champion": 0.7564
+  },
+  {
+    "generation": 30,
+    "best": 0.7528,
+    "avg": 0.7162,
+    "champion": 0.7564
+  },
+  {
+    "generation": 31,
+    "best": 0.7528,
+    "avg": 0.7163,
+    "champion": 0.7564
+  },
+  {
+    "generation": 32,
+    "best": 0.7603,
+    "avg": 0.7178,
+    "champion": 0.7603
+  },
+  {
+    "generation": 33,
+    "best": 0.7461,
+    "avg": 0.7134,
+    "champion": 0.7603
+  },
+  {
+    "generation": 34,
+    "best": 0.7457,
+    "avg": 0.7209,
+    "champion": 0.7603
+  },
+  {
+    "generation": 35,
+    "best": 0.7456,
+    "avg": 0.7199,
+    "champion": 0.7603
+  },
+  {
+    "generation": 36,
+    "best": 0.7458,
+    "avg": 0.7204,
+    "champion": 0.7603
+  },
+  {
+    "generation": 37,
+    "best": 0.746,
+    "avg": 0.7194,
+    "champion": 0.7603
+  },
+  {
+    "generation": 38,
+    "best": 0.7454,
+    "avg": 0.72,
+    "champion": 0.7603
+  },
+  {
+    "generation": 39,
+    "best": 0.7465,
+    "avg": 0.7204,
+    "champion": 0.7603
+  },
+  {
+    "generation": 40,
+    "best": 0.7481,
+    "avg": 0.7211,
+    "champion": 0.7603
+  },
+  {
+    "generation": 41,
+    "best": 0.7485,
+    "avg": 0.7161,
+    "champion": 0.7603
+  },
+  {
+    "generation": 42,
+    "best": 0.7685,
+    "avg": 0.718,
+    "champion": 0.7685
+  },
+  {
+    "generation": 43,
+    "best": 0.7686,
+    "avg": 0.7334,
+    "champion": 0.7686
+  },
+  {
+    "generation": 44,
+    "best": 0.7665,
+    "avg": 0.7355,
+    "champion": 0.7686
+  },
+  {
+    "generation": 45,
+    "best": 0.7664,
+    "avg": 0.7318,
+    "champion": 0.7686
+  },
+  {
+    "generation": 46,
+    "best": 0.766,
+    "avg": 0.7304,
+    "champion": 0.7686
+  },
+  {
+    "generation": 47,
+    "best": 0.7664,
+    "avg": 0.7171,
+    "champion": 0.7686
+  },
+  {
+    "generation": 48,
+    "best": 0.7663,
+    "avg": 0.7221,
+    "champion": 0.7686
+  }
+]

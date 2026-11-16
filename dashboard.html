@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herobrain — Bot Control</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+    /* Light Theme (Reference-inspired warm stone & off-white) */
+    --outer-bg: #e7e8df;
+    --shell-bg: #f3f3ec;
+    --rail-bg: #ecece3;
+    --card-bg: #ffffff;
+    --tile-bg: #f4f4ed;
+    --input-bg: #f7f7f2;
+    --terminal-bg: #f5f5ef;
+    --border: #e3e4da;
+    --border-strong: #d3d5c8;
+
+    --txt: #191a1c;
+    --txt-muted: #6f7278;
+    --txt-dim: #92969c;
+
+    --primary-bg: #202124;
+    --primary-txt: #ffffff;
+    --primary-hover: #323438;
+
+    --sec-bg: #f1f1ea;
+    --sec-hover: #e6e6dc;
+
+    --accent: #6c63ff;
+    --accent-soft: #eceaff;
+    --accent-txt: #5248e5;
+
+    --ok: #16a34a;
+    --ok-soft: #dcfce7;
+    --warn: #c27803;
+    --warn-soft: #fef3c7;
+    --bad: #dc2626;
+    --bad-soft: #fee2e2;
+
+    --shadow-sm: 0 1px 2px rgba(20, 22, 24, 0.04);
+    --shadow-md: 0 8px 24px rgba(20, 22, 24, 0.06);
+  }
+
+  [data-theme="dark"] {
+    /* Dark Theme (Minimal warm charcoal / obsidian) */
+    --outer-bg: #0c0d0f;
+    --shell-bg: #131518;
+    --rail-bg: #17191d;
+    --card-bg: #1b1d22;
+    --tile-bg: #22252b;
+    --input-bg: #14161a;
+    --terminal-bg: #111317;
+    --border: #282b32;
+    --border-strong: #353942;
+
+    --txt: #f1f2f4;
+    --txt-muted: #989ca6;
+    --txt-dim: #696e78;
+
+    --primary-bg: #f1f2f4;
+    --primary-txt: #141517;
+    --primary-hover: #dcdedf;
+
+    --sec-bg: #24272e;
+    --sec-hover: #2d313a;
+
+    --accent: #857dff;
+    --accent-soft: rgba(133, 125, 255, 0.16);
+    --accent-txt: #a59fff;
+
+    --ok: #3fb950;
+    --ok-soft: rgba(63, 185, 80, 0.15);
+    --warn: #e3a024;
+    --warn-soft: rgba(227, 160, 36, 0.15);
+    --bad: #f85149;
+    --bad-soft: rgba(248, 81, 73, 0.15);
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.25);
+    --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.45);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+
+  body {
+    background: var(--outer-bg);
+    color: var(--txt);
+    font-family: var(--font-sans);
+    font-size: 13px;
+    line-height: 1.4;
+    padding: 12px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  svg.ico {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    stroke-width: 1.85;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+  }
+
+  /* App Frame */
+  .app-shell {
+    max-width: 1320px;
+    margin: 0 auto;
+    background: var(--shell-bg);
+    border: 1px solid var(--border-strong);
+    border-radius: 20px;
+    display: flex;
+    min-height: calc(100vh - 24px);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Left Icon Rail */
+  .rail {
+    width: 54px;
+    background: var(--rail-bg);
+    border-right: 1px solid var(--border);
+    padding: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary-bg);
+    color: var(--primary-txt);
+    display: grid;
+    place-items: center;
+    margin-bottom: 14px;
+  }
+
+  .rail-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .rail-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background: var(--card-bg);
+    color: var(--txt-muted);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .rail-btn:hover { color: var(--txt); border-color: var(--border-strong); }
+  .rail-btn.active {
+    background: var(--primary-bg);
+    color: var(--primary-txt);
+  }
+
+  .theme-pill {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .theme-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: var(--txt-muted);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .theme-btn.active {
+    background: var(--tile-bg);
+    color: var(--txt);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Main Workspace */
+  .main {
+    flex: 1;
+    min-width: 0;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Top Header */
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .title-wrap {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+  }
+
+  .title-wrap h1 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .title-sub {
+    font-size: 11px;
+    color: var(--txt-muted);
+    font-weight: 500;
+  }
+
+  .stats-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .stat-chip {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 11px;
+    color: var(--txt-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .stat-chip b { color: var(--txt); font-weight: 600; }
+
+  /* Tabs Bar */
+  .tabs-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .tabs {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tab {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    color: var(--txt-muted);
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+  }
+
+  .tab:hover { color: var(--txt); border-color: var(--border-strong); }
+  .tab.active {
+    background: var(--accent-soft);
+    border-color: transparent;
+    color: var(--accent-txt);
+    font-weight: 600;
+  }
+
+  .tab-count {
+    background: var(--tile-bg);
+    color: var(--txt-muted);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 1px 6px;
+    border-radius: 999px;
+  }
+
+  .tab.active .tab-count {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  /* Layout Grids */
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 12px;
+    align-items: start;
+  }
+
+  .stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 12px 14px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  /* Bot Cards Grid (Reference Card Style) */
+  .bot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    gap: 10px;
+  }
+
+  .bot-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.15s ease;
+  }
+
+  .bot-card:hover { border-color: var(--border-strong); }
+
+  .bot-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+  }
+
+  .bot-id {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 0;
+  }
+
+  .bot-avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--tile-bg);
+    border: 1px solid var(--border);
+    color: var(--txt);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+  }
+
+  .bot-name {
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .badge.online { background: var(--ok-soft); color: var(--ok); }
+  .badge.connecting, .badge.logged_in { background: var(--accent-soft); color: var(--accent-txt); }
+  .badge.disconnected, .badge.kicked { background: var(--bad-soft); color: var(--bad); }
+  .badge.stopping { background: var(--warn-soft); color: var(--warn); }
+  .badge.leader { background: var(--primary-bg); color: var(--primary-txt); font-size: 9.5px; padding: 1px 6px; }
+
+  .bot-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+  }
+
+  .tile {
+    background: var(--tile-bg);
+    border-radius: 10px;
+    padding: 7px 9px;
+  }
+
+  .tile-lbl {
+    font-size: 10px;
+    color: var(--txt-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 3px;
+  }
+
+  .tile-val {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--txt);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hp-track {
+    width: 100%;
+    height: 4px;
+    background: var(--border);
+    border-radius: 999px;
+    overflow: hidden;
+    margin-top: 4px;
+  }
+
+  .hp-fill { height: 100%; background: var(--ok); border-radius: 999px; }
+  .hp-fill.hurt { background: var(--warn); }
+  .hp-fill.crit { background: var(--bad); }
+
+  .bot-meta {
+    font-size: 11px;
+    color: var(--txt-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .bot-actions {
+    display: flex;
+    gap: 6px;
+    margin-top: 2px;
+  }
+
+  .bot-actions button { flex: 1; justify-content: center; }
+
+  /* Forms & Inputs */
+  .row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  .row > .field { flex: 1; min-width: 105px; }
+
+  label {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 500;
+    color: var(--txt-muted);
+    margin: 7px 0 3px;
+  }
+
+  .field > label:first-child { margin-top: 0; }
+
+  input, select, textarea {
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid var(--border);
+    color: var(--txt);
+    padding: 6px 9px;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 12px;
+    transition: border-color 0.15s ease;
+  }
+
+  textarea { resize: vertical; min-height: 54px; }
+
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  /* Pill Buttons */
+  .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 9px;
+  }
+
+  button.btn {
+    background: var(--sec-bg);
+    border: 1px solid var(--border);
+    color: var(--txt);
+    padding: 6px 11px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 11.5px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.15s ease;
+  }
+
+  button.btn:hover { background: var(--sec-hover); }
+
+  button.btn.primary {
+    background: var(--primary-bg);
+    border-color: var(--primary-bg);
+    color: var(--primary-txt);
+  }
+
+  button.btn.primary:hover { background: var(--primary-hover); }
+
+  button.btn.danger {
+    background: var(--bad-soft);
+    border-color: transparent;
+    color: var(--bad);
+  }
+
+  button.btn.danger:hover { filter: brightness(0.95); }
+
+  button.btn.warn {
+    background: var(--warn-soft);
+    border-color: transparent;
+    color: var(--warn);
+  }
+
+  button.btn.sm { padding: 4px 9px; font-size: 11px; }
+
+  .hint {
+    margin-top: 8px;
+    padding: 6px 9px;
+    background: var(--tile-bg);
+    border-radius: 9px;
+    font-size: 11px;
+    color: var(--txt-muted);
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Logs */
+  pre#logs {
+    background: var(--terminal-bg);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 9px 11px;
+    height: 220px;
+    overflow: auto;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.5;
+    color: var(--txt);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    background: var(--tile-bg);
+    border: 1px dashed var(--border-strong);
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    color: var(--txt-muted);
+    font-size: 12px;
+  }
+
+  /* Reference-style Top-Right Floating Toast */
+  .toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-strong);
+    color: var(--txt);
+    padding: 8px 13px 8px 9px;
+    border-radius: 14px;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: all 0.22s ease;
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  .toast.show { opacity: 1; transform: translateY(0); }
+
+  .toast-ico {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--ok-soft);
+    color: var(--ok);
+    flex-shrink: 0;
+  }
+
+  .toast.err .toast-ico {
+    background: var(--bad-soft);
+    color: var(--bad);
+  }
+
+  .hidden { display: none !important; }
+
+  @media (max-width: 960px) {
+    .grid-main { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 6px; }
+    .app-shell { flex-direction: column; border-radius: 16px; min-height: calc(100vh - 12px); }
+    .rail {
+      width: 100%;
+      flex-direction: row;
+      padding: 8px 12px;
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand-mark { margin-bottom: 0; }
+    .rail-group { flex-direction: row; }
+    .theme-pill { flex-direction: row; }
+    .main { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app-shell">
+  <!-- Minimal Left Sidebar Rail -->
+  <aside class="rail">
+    <div class="rail-group">
+      <div class="brand-mark" title="Herobrain">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v2a3 3 0 0 1-2 2.83V18a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3v-3.17A3 3 0 0 1 4 12v-2a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><path d="M9 12h.01M15 12h.01M9.5 16h5"/></svg>
+      </div>
+      <button class="rail-btn active" data-view="all" onclick="setView('all')" title="All Panels">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+      </button>
+      <button class="rail-btn" data-view="bots" onclick="setView('bots')" title="Live Bots & Chat">
+        <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 4v4M8 4h8M9 13h.01M15 13h.01"/></svg>
+      </button>
+      <button class="rail-btn" data-view="config" onclick="setView('config')" title="Config & Swarm">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M2 14h4M10 8h4M18 16h4"/></svg>
+      </button>
+      <button class="rail-btn" data-view="logs" onclick="setView('logs')" title="Console Logs">
+        <svg class="ico" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      </button>
+    </div>
+
+    <!-- Light / Dark Theme Toggle -->
+    <div class="theme-pill" role="group" aria-label="Theme Switcher">
+      <button class="theme-btn" id="btnDark" onclick="setTheme('dark')" title="Dark Theme">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="theme-btn" id="btnLight" onclick="setTheme('light')" title="Light Theme">
+        <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Main Workspace -->
+  <main class="main">
+    <header class="topbar">
+      <div class="title-wrap">
+        <h1>Herobrain</h1>
+        <span class="title-sub">Swarm Control</span>
+      </div>
+      <div class="stats-row" id="globalStats">
+        <span class="stat-chip">Loading telemetry...</span>
+      </div>
+    </header>
+
+    <!-- View Tabs -->
+    <div class="tabs-bar">
+      <div class="tabs">
+        <button class="tab active" data-view="all" onclick="setView('all')">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Overview
+        </button>
+        <button class="tab" data-view="bots" onclick="setView('bots')">
+          <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>
+          Live Bots <span class="tab-count" id="botCount">0</span>
+        </button>
+        <button class="tab" data-view="config" onclick="setView('config')">
+          <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.6.85 1 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          Config &amp; Swarm
+        </button>
+        <button class="tab" data-view="logs" onclick="setView('logs')">
+          <svg class="ico" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+          Console
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid-main" id="mainGrid">
+      <!-- Left Column: Live Bots + Chat + Logs -->
+      <div class="stack" id="leftCol">
+        <section class="card" data-section="bots">
+          <div class="card-head">
+            <div class="card-title">
+              <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>
+              Active Agents
+            </div>
+            <button class="btn sm" onclick="act('/api/connect')">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg>
+              Connect Leader
+            </button>
+          </div>
+          <div class="bot-grid" id="botGrid">
+            <div class="empty-state">Loading active agents...</div>
+          </div>
+        </section>
+
+        <section class="card" data-section="bots">
+          <div class="card-head">
+            <div class="card-title">
+              <svg class="ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              Chat &amp; Command Dispatch
+            </div>
+          </div>
+          <div class="row">
+            <div class="field" style="max-width:170px">
+              <label>Target</label>
+              <select id="chatTarget"><option value="leader">leader</option></select>
+            </div>
+            <div class="field">
+              <label>Message / Command</label>
+              <input id="chatMsg" placeholder="!mine, !follow kzix, !swarm start 3" onkeydown="if(event.key==='Enter')sendChat()">
+            </div>
+            <button class="btn primary" onclick="sendChat()" style="height:31px">
+              <svg class="ico" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send
+            </button>
+          </div>
+        </section>
+
+        <section class="card" data-section="logs">
+          <div class="card-head">
+            <div class="card-title">
+              <svg class="ico" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+              Console Logs
+            </div>
+            <div style="display:flex; gap:6px">
+              <button class="btn sm" onclick="loadLogs()">
+                <svg class="ico" viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                Refresh
+              </button>
+              <button class="btn sm primary" id="autoBtn" onclick="toggleAuto()">Auto: ON</button>
+            </div>
+          </div>
+          <pre id="logs">loading...</pre>
+        </section>
+      </div>
+
+      <!-- Right Column: Swarm Controls + Server Config -->
+      <div class="stack" id="rightCol">
+        <section class="card" data-section="config">
+          <div class="card-head">
+            <div class="card-title">
+              <svg class="ico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Swarm Controls
+            </div>
+          </div>
+          <div class="field">
+            <label>Bot Names (comma or newline separated · first becomes Leader if offline)</label>
+            <textarea id="f_names" rows="2" placeholder="Entity303, GhostKing, Miner02, Sniper01"></textarea>
+          </div>
+          <div class="row" style="margin-top:7px">
+            <div class="field" style="max-width:150px">
+              <label>Quick Count</label>
+              <select id="swarmCount">
+                <option value="1">1 bot</option>
+                <option value="2" selected>2 bots</option>
+                <option value="3">3 bots</option>
+                <option value="4">4 bots</option>
+                <option value="6">6 bots</option>
+                <option value="8">8 bots</option>
+              </select>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button class="btn primary" onclick="spawnNamed()">
+              <svg class="ico" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              Start Named Swarm
+            </button>
+            <button class="btn" onclick="act('/api/spawn')">
+              <svg class="ico" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              Quick Start
+            </button>
+            <button class="btn warn" onclick="act('/api/stop', {all:false})">
+              <svg class="ico" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+              Stop Swarm
+            </button>
+            <button class="btn danger" onclick="act('/api/stop', {all:true})">
+              <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              Stop ALL
+            </button>
+          </div>
+          <div class="hint">
+            <svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span>System stays alive after Stop ALL — enter names above and press Start Named Swarm to bring leader back.</span>
+          </div>
+        </section>
+
+        <section class="card" data-section="config">
+          <div class="card-head">
+            <div class="card-title">
+              <svg class="ico" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+              Server Configuration
+            </div>
+          </div>
+          <form id="cfgForm" onsubmit="saveCfg(event)">
+            <div class="row">
+              <div class="field"><label>Server Host</label><input id="f_host" oninput="this.dataset.dirty='1'"></div>
+              <div class="field" style="max-width:110px"><label>Port</label><input id="f_port" type="number" oninput="this.dataset.dirty='1'"></div>
+            </div>
+            <div class="row" style="margin-top:6px">
+              <div class="field"><label>Bot Username (prefix)</label><input id="f_bot" oninput="this.dataset.dirty='1'"></div>
+              <div class="field"><label>Owner Username</label><input id="f_owner" oninput="this.dataset.dirty='1'"></div>
+            </div>
+            <div class="field" style="margin-top:6px">
+              <label>Friendly Players (comma separated)</label>
+              <input id="f_friendly" placeholder="e.g. kzix, friend2" oninput="this.dataset.dirty='1'">
+            </div>
+            <div class="btn-group">
+              <button class="btn primary" type="submit">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                Save Config
+              </button>
+            </div>
+          </form>
+          <div class="hint">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <span>Host, Port &amp; Username apply to new connections. Reconnect live bots to apply changes.</span>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Toast Pill -->
+<div class="toast" id="toast">
+  <span class="toast-ico" id="toastIco"></span>
+  <span id="toastMsg"></span>
+</div>
+
+<script>
+let auto = true;
+let toastTimer = null;
+
+/* Theme Init & Switcher */
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('hb_theme', theme);
+  document.getElementById('btnDark').classList.toggle('active', theme === 'dark');
+  document.getElementById('btnLight').classList.toggle('active', theme === 'light');
+}
+setTheme(localStorage.getItem('hb_theme') || 'light');
+
+/* View Filter Tabs */
+function setView(view) {
+  document.querySelectorAll('.tab, .rail-btn').forEach(el => {
+    el.classList.toggle('active', el.dataset.view === view);
+  });
+  const grid = document.getElementById('mainGrid');
+  const rightCol = document.getElementById('rightCol');
+  const leftCol = document.getElementById('leftCol');
+
+  document.querySelectorAll('[data-section]').forEach(sec => {
+    const show = view === 'all' || sec.dataset.section === view;
+    sec.classList.toggle('hidden', !show);
+  });
+
+  if (view === 'config') {
+    leftCol.classList.add('hidden');
+    rightCol.classList.remove('hidden');
+    grid.style.gridTemplateColumns = '1fr';
+  } else if (view === 'bots' || view === 'logs') {
+    leftCol.classList.remove('hidden');
+    rightCol.classList.add('hidden');
+    grid.style.gridTemplateColumns = '1fr';
+  } else {
+    leftCol.classList.remove('hidden');
+    rightCol.classList.remove('hidden');
+    grid.style.gridTemplateColumns = '';
+  }
+}
+
+async function j(url, opts) {
+  const r = await fetch(url, opts);
+  return r.json();
+}
+
+const ICO_OK = '<svg class="ico" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>';
+const ICO_ERR = '<svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>';
+
+function toast(msg, isErr = false) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastIco').innerHTML = isErr ? ICO_ERR : ICO_OK;
+  document.getElementById('toastMsg').textContent = msg;
+  t.classList.toggle('err', isErr);
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2400);
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+}
+
+function setFieldIfClean(id, val) {
+  const el = document.getElementById(id);
+  if (el && !el.dataset.dirty && document.activeElement !== el) {
+    el.value = val ?? '';
+  }
+}
+
+async function loadState() {
+  try {
+    const s = await j('/api/state');
+    setFieldIfClean('f_host', s.config.SERVER_HOST);
+    setFieldIfClean('f_port', s.config.SERVER_PORT);
+    setFieldIfClean('f_bot', s.config.BOT_USERNAME);
+    setFieldIfClean('f_owner', s.config.OWNER_USERNAME);
+    setFieldIfClean('f_friendly', (s.config.FRIENDLY_PLAYERS || []).join(', '));
+
+    document.getElementById('globalStats').innerHTML = `
+      <span class="stat-chip">Gen <b>${esc(s.evo.generation)}</b></span>
+      <span class="stat-chip">Mode <b>${esc(s.evo.mode)}</b></span>
+      <span class="stat-chip">Exp <b>${esc(s.evo.experiences)}</b></span>
+      <span class="stat-chip">Stage <b>${esc(s.memory.stage)}</b></span>
+      <span class="stat-chip">Tasks <b style="color:var(--ok)">${esc(s.memory.completed)}</b> / <b style="color:var(--bad)">${esc(s.memory.failed)}</b></span>
+      <span class="stat-chip">Heap <b>${esc(s.heapMB)}MB</b></span>
+      <span class="stat-chip"><b>${esc(s.config.SERVER_HOST)}:${esc(s.config.SERVER_PORT)}</b></span>
+    `;
+
+    const grid = document.getElementById('botGrid');
+    const sel = document.getElementById('chatTarget');
+    const selKeep = sel.value;
+    document.getElementById('botCount').textContent = s.agents.length;
+
+    if (!s.agents.length) {
+      grid.innerHTML = '<div class="empty-state">No active bots connected. Click Connect Leader or Start Named Swarm.</div>';
+      sel.innerHTML = '<option value="leader">leader</option>';
+    } else {
+      grid.innerHTML = s.agents.map(a => {
+        const st = esc(a.status);
+        const hpPct = Math.max(0, Math.min(100, (a.health || 0) * 5));
+        const hpCls = a.health <= 6 ? 'crit' : (a.health <= 12 ? 'hurt' : '');
+        const pos = a.position ? `${a.position.x}, ${a.position.y}, ${a.position.z}` : '—';
+        return `
+          <div class="bot-card">
+            <div class="bot-top">
+              <div class="bot-id">
+                <div class="bot-avatar">
+                  <svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>
+                </div>
+                <span class="bot-name">${esc(a.username)}</span>
+                ${a.isLeader ? '<span class="badge leader">LEADER</span>' : ''}
+              </div>
+              <span class="badge ${st}">${st}</span>
+            </div>
+
+            <div class="bot-tiles">
+              <div class="tile">
+                <div class="tile-lbl">
+                  <svg class="ico" style="width:11px;height:11px" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                  HP / Food
+                </div>
+                <div class="tile-val">${a.health}/20 · ${a.food}/20</div>
+                <div class="hp-track"><div class="hp-fill ${hpCls}" style="width:${hpPct}%"></div></div>
+              </div>
+              <div class="tile">
+                <div class="tile-lbl">
+                  <svg class="ico" style="width:11px;height:11px" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Pos · Chunks
+                </div>
+                <div class="tile-val">${pos}</div>
+                <div class="tile-lbl" style="margin:2px 0 0">${a.chunks} chunks</div>
+              </div>
+            </div>
+
+            <div class="bot-meta">Slot ${a.slot}${a.disconnectReason ? ' · ' + esc(a.disconnectReason) : ''}</div>
+
+            <div class="bot-actions">
+              <button class="btn sm" onclick="focusChat('${esc(a.username)}')">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Target
+              </button>
+              <button class="btn sm danger" onclick="disc('${esc(a.username)}')">
+                <svg class="ico" viewBox="0 0 24 24"><path d="M18.36 6.64a9 9 0 1 1-12.73 0"/><line x1="12" y1="2" x2="12" y2="12"/></svg>
+                Disconnect
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      const names = s.agents.map(a => `<option value="${esc(a.username)}">${esc(a.username)}</option>`).join('');
+      sel.innerHTML = '<option value="leader">leader</option>' + names;
+      sel.value = [...sel.options].some(o => o.value === selKeep) ? selKeep : 'leader';
+    }
+  } catch (e) {
+    console.error('state load failed', e);
+  }
+}
+
+function focusChat(username) {
+  const sel = document.getElementById('chatTarget');
+  sel.value = username;
+  document.getElementById('chatMsg').focus();
+}
+
+async function loadLogs() {
+  try {
+    const l = await j('/api/logs');
+    const el = document.getElementById('logs');
+    const stick = el.scrollTop + el.clientHeight >= el.scrollHeight - 30;
+    el.textContent = l.lines.join('\n') || '(no logs)';
+    if (stick) el.scrollTop = el.scrollHeight;
+  } catch {}
+}
+
+function toggleAuto() {
+  auto = !auto;
+  const btn = document.getElementById('autoBtn');
+  btn.textContent = 'Auto: ' + (auto ? 'ON' : 'OFF');
+  btn.classList.toggle('primary', auto);
+}
+
+async function act(url, body) {
+  const extra = body || {};
+  if (url === '/api/spawn') extra.count = parseInt(document.getElementById('swarmCount').value, 10) || 3;
+  try {
+    const r = await j(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(extra)
+    });
+    toast(r.ok ? (r.message || 'Action completed') : (r.error || 'Action failed'), !r.ok);
+    loadState();
+  } catch (e) {
+    toast(e.message, true);
+  }
+}
+
+async function spawnNamed() {
+  const raw = document.getElementById('f_names').value.trim();
+  if (!raw) {
+    toast('Enter bot names (comma or newline separated)', true);
+    return;
+  }
+  const names = raw.split(/[,\n]+/).map(s => s.trim()).filter(Boolean);
+  try {
+    const r = await j('/api/spawn', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ names })
+    });
+    toast(r.ok ? `Leader: ${r.leader || '—'} · Queued: ${r.queued.join(', ')}` : (r.error || 'Failed'), !r.ok);
+    loadState();
+  } catch (e) {
+    toast(e.message, true);
+  }
+}
+
+async function disc(u) {
+  if (confirm(`Disconnect ${u}?`)) act('/api/disconnect', { username: u });
+}
+
+async function sendChat() {
+  const msg = document.getElementById('chatMsg').value.trim();
+  if (!msg) return;
+  const target = document.getElementById('chatTarget').value;
+  await act('/api/chat', { target, message: msg });
+  document.getElementById('chatMsg').value = '';
+}
+
+async function saveCfg(ev) {
+  ev.preventDefault();
+  const friendly = document.getElementById('f_friendly').value.split(',').map(s => s.trim()).filter(Boolean);
+  try {
+    const r = await j('/api/config', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        SERVER_HOST: document.getElementById('f_host').value,
+        SERVER_PORT: document.getElementById('f_port').value,
+        BOT_USERNAME: document.getElementById('f_bot').value,
+        OWNER_USERNAME: document.getElementById('f_owner').value,
+        FRIENDLY_PLAYERS: friendly
+      })
+    });
+    if (r.ok) {
+      ['f_host', 'f_port', 'f_bot', 'f_owner', 'f_friendly'].forEach(id => delete document.getElementById(id).dataset.dirty);
+    }
+    toast(r.ok ? 'Config saved (applies to new connections)' : (r.error || 'Save failed'), !r.ok);
+  } catch (e) {
+    toast(e.message, true);
+  }
+}
+
+loadState();
+loadLogs();
+setInterval(() => { if (auto) { loadState(); loadLogs(); } }, 2500);
+</script>
+</body>
+</html>
