@@ -33,9 +33,16 @@ function captureConsole() {
   console.error = (...a) => { push('ERR', a); origError(...a); };
 }
 
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET,POST,OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Max-Age': '86400'
+};
+
 function sendJSON(res, code, data) {
   const body = JSON.stringify(data);
-  res.writeHead(code, { 'Content-Type': 'application/json; charset=utf-8' });
+  res.writeHead(code, { 'Content-Type': 'application/json; charset=utf-8', ...CORS_HEADERS });
   res.end(body);
 }
 
@@ -97,6 +104,11 @@ function startWebUI(ctx) {
     const path = url.pathname;
 
     try {
+      if (req.method === 'OPTIONS') {
+        res.writeHead(204, CORS_HEADERS);
+        return res.end();
+      }
+
       if (req.method === 'GET' && path === '/') {
         return serveDashboard(res);
       }

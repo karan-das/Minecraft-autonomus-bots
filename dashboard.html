@@ -940,8 +940,26 @@ function setView(view) {
   }
 }
 
+// API base: Vercel hosting पर अपने PC का tunnel URL एक बार ?api=... param से डालो, localStorage में save हो जाएगा
+// उदा: https://yourapp.vercel.app/?api=https://my-tunnel.trycloudflare.com  (एक बार खोलो, फिर normal URL use करो)
+(function initApiBase() {
+  const params = new URLSearchParams(location.search);
+  const fromUrl = params.get('api');
+  if (fromUrl !== null) {
+    localStorage.setItem('apiBase', fromUrl.trim().replace(/\/+$/, ''));
+    if (fromUrl.trim() === '') localStorage.removeItem('apiBase');
+    params.delete('api');
+    const qs = params.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : ''));
+  }
+})();
+
+function apiBase() {
+  return localStorage.getItem('apiBase') || '';
+}
+
 async function j(url, opts) {
-  const r = await fetch(url, opts);
+  const r = await fetch(apiBase() + url, opts);
   return r.json();
 }
 

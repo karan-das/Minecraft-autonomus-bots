@@ -1,0 +1,17 @@
+# Sirf dashboard.html + vercel.json upload hoga — bots aur secrets PC par hi rahenge
+node_modules/
+data/
+memory/
+old/
+dist/
+.env
+.env.example
+bot.js
+skills.js
+evolution.js
+webui.js
+bot-memory.json
+bot-config.json
+package.json
+package-lock.json
+st.txt
